@@ -168,6 +168,20 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .perfume-caption{padding:20px 24px 32px}.perfume-caption small{display:block;color:#8C8170;font-size:10px;letter-spacing:.14em;margin-bottom:10px}.perfume-caption h3{font-size:15px;line-height:1.6;font-weight:400;margin:0 0 10px;word-break:keep-all}.perfume-caption p{font-size:13px;color:#59534C;margin:0}.perfume-tile--empty .perfume-caption h3{color:#9D968C}
 .perfume-tile>a:focus-visible{outline:2px solid #8C774A;outline-offset:5px}
 @media(max-width:860px){.perfume-collection{padding:48px 0 56px}.collection-heading{margin-left:16px;margin-right:16px}.collection-heading h2{font-size:26px}.perfume-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}.perfume-caption{padding:14px 12px 24px}.perfume-caption h3{font-size:13px}.collection-heading span{font-size:10px}}
+
+/* Featured product mosaic: 1 | 2 3 / 1 | 4 5 */
+.perfume-grid{grid-template-areas:"featured second third" "featured fourth fifth";grid-template-columns:2fr 1fr 1fr;align-items:stretch}
+.perfume-tile{position:relative;min-height:0}
+.perfume-tile[data-product-slot="1"]{grid-area:featured}
+.perfume-tile[data-product-slot="2"]{grid-area:second}
+.perfume-tile[data-product-slot="3"]{grid-area:third}
+.perfume-tile[data-product-slot="4"]{grid-area:fourth}
+.perfume-tile[data-product-slot="5"]{grid-area:fifth}
+.perfume-tile>a{height:100%}
+.perfume-tile[data-product-slot="1"] .perfume-image-slot{height:100%;aspect-ratio:auto}
+.perfume-caption{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(transparent,rgba(246,245,242,.95));pointer-events:none}
+.perfume-tile--empty .perfume-caption{padding:12px 16px}
+@media(max-width:860px){.perfume-grid{grid-template-columns:2fr 1fr 1fr;grid-template-areas:"featured second third" "featured fourth fifth"}.perfume-caption{padding:12px}.perfume-caption h3{font-size:11px;margin-bottom:4px}.perfume-caption small{font-size:8px;margin-bottom:4px}.perfume-caption p{font-size:11px}.perfume-tile--empty .perfume-caption{display:none}.perfume-placeholder svg{width:28px;height:42px}.perfume-placeholder span{font-size:9px}}
 </style></head>
 <body><div class="topbar"><div class="topbar-window"><div class="topbar-track"><div class="topbar-group"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div></div></div></div>
 <header class="hd"><div class="in">
