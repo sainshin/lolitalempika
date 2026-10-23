@@ -184,7 +184,9 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 @media(max-width:860px){.perfume-grid{grid-template-columns:2fr 1fr 1fr;grid-template-areas:"featured second third" "featured fourth fifth"}.perfume-caption{padding:12px}.perfume-caption h3{font-size:11px;margin-bottom:4px}.perfume-caption small{font-size:8px;margin-bottom:4px}.perfume-caption p{font-size:11px}.perfume-tile--empty .perfume-caption{display:none}.perfume-placeholder svg{width:28px;height:42px}.perfume-placeholder span{font-size:9px}}
 
 /* Brand banner inspired by the Life On Earth reference */
-.earth-banner{height:384px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;color:#fff;background:#AFC8BB;padding:40px 20px}
+.earth-banner{--earth-background-image:none;height:384px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;isolation:isolate;clip-path:inset(0);color:#fff;background:#AFC8BB;padding:40px 20px}
+.earth-banner::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-color:#AFC8BB;background-image:var(--earth-background-image);background-position:center;background-size:cover;background-repeat:no-repeat}
+@media(prefers-reduced-motion:reduce){.earth-banner::before{position:absolute}}
 .earth-banner__content{position:relative;z-index:1}
 .earth-banner h2{font-family:inherit;font-size:30px;font-weight:600;line-height:39px;margin:0 0 25px}
 .earth-banner p{font-size:16px;font-weight:400;line-height:24px;margin:0}
