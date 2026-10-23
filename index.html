@@ -45,14 +45,14 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
 .dots i{width:6px;height:6px;border-radius:50%;background:#C8C8C8}.dots i:first-child{background:var(--ink)}
 .info{padding-top:40px}
-.brand-row{display:flex;justify-content:space-between;font-size:20px}
-.brand-row span{color:#999}
-.info h1{font-size:20px;font-weight:400;margin:8px 0 12px}
+.brand-row{font-size:12px;line-height:1.5;color:#767676;text-decoration:underline;text-underline-offset:5px}
+.info h1{font-size:28px;font-weight:700;line-height:1.4;letter-spacing:-.04em;margin:14px 0 0;word-break:keep-all}
 .state{display:inline-block;background:var(--brand);color:#fff;font-size:12px;padding:2px 8px}
-.price{display:flex;align-items:baseline;gap:10px;margin:22px 0 0;padding-bottom:14px;border-bottom:2px solid var(--ink)}
-.price em{font-style:normal;color:var(--sale);font-size:24px}
-.price b{font-size:24px}
-.price small{color:#999;font-size:16px}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin:28px 0 0;padding-bottom:20px}
+.price em{font-style:normal;color:var(--ink);font-size:24px;font-weight:700}
+.price b{font-size:28px;font-weight:700;line-height:1.4}
+.price del{color:#AAA;font-size:14px}
+.price small{color:#999;font-size:12px}
 .price .cp{margin-left:auto;background:var(--ink);color:#fff;font-size:14px;padding:6px 14px}
 .pt{display:flex;justify-content:space-between;padding:14px 0;font-size:14px;color:#555}
 .pt>span{flex:1;min-width:0;overflow-wrap:break-word}.pt a{flex-shrink:0;text-decoration:underline;margin-left:16px}
@@ -164,10 +164,9 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 <div class="in top">
   <div class="gal"><img class="hero-image" src="assets/hero-midnight-gold.png" width="1254" height="1254" alt="골드 향수 보틀과 자정의 달과 별이 장식된 롤리타 렘피카 패키지" fetchpriority="high" decoding="async"></div>
   <div class="info">
-    <div class="brand-row">브랜드 ㅣ 롤리타렘피카 <span aria-hidden="true">›</span></div>
+    <div class="brand-row">롤리타렘피카</div>
     <h1>[리미티드 에디션] 미드나잇 골드 오 드 퍼퓸 100ml</h1>
-    <span class="state">출시 예정</span>
-    <div class="price"><b>125,000원</b><a class="cp" href="#apply">↓ 알림 신청</a></div>
+    <div class="price"><em>32%</em><b>125,100원</b><del>183,970원</del><small>퍼퓸 할인가</small></div>
     <div class="pt"><span>롤리타 렘피카 첫 번째 향수의 리코리스 플라워의 향을 센슈얼하고 신비로운 느낌으로 풍부하게 담아낸 프리미엄 리미티드 에디션. 첫 번째 향수 오 드 퍼품의 주요 성분만을 농축한 마법의 향수.</span><a href="#notes">향 노트 보기</a></div>
     <div class="star">향 계열 구르망 · 플로럴<a href="#detail">향 이야기</a></div>
     <div class="total"><span>출시 알림</span><b>무료</b></div>
