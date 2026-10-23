@@ -64,9 +64,15 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .buy{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .buy a{height:64px;display:flex;align-items:center;justify-content:center;font-size:18px;border-radius:4px}
 .buy .g{background:#E8E8E8;color:#333;text-decoration:none}.buy .k{background:var(--brand);color:#fff}
-.rows{margin-top:36px}
-.rows div{display:grid;grid-template-columns:120px 1fr;padding:18px 0;border-bottom:1px solid var(--line);font-size:14px}
-.rows b{font-weight:400}
+.rows{margin-top:36px;border-top:1px solid #EAE7E4}
+.rows>div{display:grid;grid-template-columns:136px minmax(0,1fr);align-items:center;padding:15px 0;border-bottom:1px solid #EAE7E4;font-size:13px;line-height:1.4;color:#4D4946}
+.rows>div>b{font-size:12px;color:#817C77;font-weight:400}
+.rows .shipping-info{display:block;line-height:1.6;overflow-wrap:break-word}
+.shipping-info p{margin:0 0 6px}.shipping-info p:last-child{margin-bottom:0}
+.shipping-info strong{font-weight:600}
+.shipping-badge{display:flex;align-items:center;gap:5px;margin-bottom:4px;font-weight:600}
+.shipping-badge svg{width:20px;height:20px;flex:none}
+
 /* 배너 2개 */
 .bn{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:0}
 .bn a{height:143px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;color:#fff}
@@ -133,7 +139,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
   .hd .logo img{width:105px}
   .in{padding:0 16px}.hd nav a{display:none}.logo{font-size:20px}.icons svg:not(:last-child){display:none}
   .top{grid-template-columns:1fr}.gal{margin:0 -16px}
-  .buy a{height:54px;font-size:16px}.rows div{grid-template-columns:96px 1fr;font-size:14px}
+  .buy a{height:54px;font-size:16px}.rows>div{grid-template-columns:96px minmax(0,1fr);font-size:13px}
   .bn{grid-template-columns:1fr;gap:10px;margin-top:24px}.bn a{height:100px;padding:0 20px}.bn b{font-size:20px}.bn span{font-size:15px}.bn i{width:90px;height:70px}
   .tabs a{font-size:14px;height:52px}.tabs{top:76px}
   .official{flex-direction:column;text-align:center}.official b{font-size:30px}.dblock p,.blackband{font-size:16px}.kv{height:380px}.rgrid{grid-template-columns:repeat(2,1fr)}.rcard .opt{min-width:0}.hd .lang{display:none}.hd nav{gap:14px;font-size:11px;overflow-x:auto}.tabs{top:120px}
@@ -174,7 +180,13 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
     <div class="buy"><a class="g" href="#detail">향 이야기 보기</a><a class="k" href="#apply" id="cta-main">한정판 알림 받기</a></div>
     <div class="rows">
 <div><b>용량</b><span>100ml</span></div>
-<div><b>향 계열</b><span>구르망 · 플로럴</span></div><div><b>배송</b><span>출시 후 순차 안내</span></div>      <div><b>보틀</b><span>황금빛 사과 보틀 · 오브제 소장</span></div>
+<div><b>향 계열</b><span>구르망 · 플로럴</span></div><div><b>배송</b><div class="shipping-info">
+      <span class="shipping-badge"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#B7B7B7"/><path d="M4 7h7v6H4zm7 2h3l2 2v2h-5" fill="white"/><circle cx="6.5" cy="14" r="1.5" fill="white"/><circle cx="13.5" cy="14" r="1.5" fill="white"/></svg>오늘출발 상품</span>
+      <p><strong>오늘출발 마감</strong> 되었습니다. (평일 12:00까지)</p>
+      <p>택배 · 기본 무료 · 도서산간 배송비 ⓘ</p>
+      <p>97,000원 이상 구매 시 무료배송</p>
+      <p>배송완료까지 1-2영업일 소요</p>
+    </div></div>      <div><b>보틀</b><span>황금빛 사과 보틀 · 오브제 소장</span></div>
     </div>
   </div>
 </div>
