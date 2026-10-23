@@ -154,6 +154,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .home-invite{padding:90px 24px;text-align:center;background:#28223D;color:#F5EADA}.home-invite h2{font-family:"Noto Serif KR",serif;font-weight:400;font-size:30px}.home-invite p{color:#CCC1D0}.home-invite a{display:inline-block;border:1px solid #BBA476;padding:16px 32px;margin-top:20px;color:#E9D6AC}
 .home-footer{padding:36px 24px;text-align:center;color:#888;font-size:12px}.home-footer b{color:#332C4B;letter-spacing:.1em}.home-footer p{margin:12px 0 0}
 @media(max-width:860px){.hd nav a{display:block}.hd nav{gap:18px;font-size:10px}.home-hero{grid-template-columns:1fr}.home-copy{padding:48px 24px}.home-photo{grid-row:1}.home-section{padding:64px 24px}.note-grid{grid-template-columns:1fr;gap:8px}.note-card{padding:24px 0}.feature-grid{grid-template-columns:1fr;gap:32px}.home-section h2,.home-invite h2{font-size:25px}.home-copy h1{font-size:34px}}
+.hd nav a,.hd nav span{text-decoration:none}
 </style></head>
 <body><div class="topbar"><div class="topbar-window"><div class="topbar-track"><div class="topbar-group"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div></div></div></div>
 <header class="hd"><div class="in">
@@ -166,18 +167,18 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
       <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><circle cx="13" cy="9" r="4.5"/><path d="M4.5 23c1-5 4.4-7.5 8.5-7.5s7.5 2.5 8.5 7.5"/></svg>
     </div>
   </div>
-  <nav><a href="index.html#detail">PARFUMS ⌄</a><a href="#notes">NOTES</a><a href="index.html#detail">LA MAISON</a><a href="index.html#notice">DETAILS</a><a href="index.html#apply">출시 알림</a></nav>
+  <nav aria-label="메인 메뉴"><a href="index.html">PERFUME</a><a href="home.html#gift">GIFT SET</a><a href="home.html#brand">BRAND</a><span>OFFLINE STORE</span></nav>
 </div></header>
 
 
 <main>
-<section class="home-hero" aria-labelledby="home-title">
+<section class="home-hero" id="brand" aria-labelledby="home-title">
 <div class="home-copy"><p class="eyebrow">LIMITED EDITION · MIDNIGHT GOLD</p><h1 id="home-title">자정에 피어나는 향,<br>황금빛으로 남다.</h1><p>롤리타렘피카의 첫 번째 향수를<br>더욱 깊고 신비롭게 담아낸 리미티드 에디션.</p><a class="home-link" href="index.html">미드나잇 골드 만나보기 <span aria-hidden="true">↗</span></a></div>
 <img class="home-photo" src="assets/hero-midnight-gold.png" width="1254" height="1254" alt="황금빛 향수 보틀과 달과 별이 장식된 롤리타렘피카 패키지" fetchpriority="high">
 </section>
 <section class="home-section" id="notes"><div class="section-head"><p class="eyebrow">THE SCENT OF MIDNIGHT</p><h2>천천히 깊어지는 자정의 향</h2><p>달콤한 첫인상부터 부드럽게 남는 여운까지.<br>구르망과 플로럴이 만나는 향의 이야기를 만나보세요.</p></div>
 <div class="note-grid"><article class="note-card"><small>01 / TOP NOTES</small><h3>체리 · 아니스</h3><p>달콤한 체리와 아니스가 열어주는<br>신비로운 향의 첫 순간.</p></article><article class="note-card"><small>02 / MIDDLE NOTE</small><h3>바이올렛</h3><p>부드러운 플로럴이 감싸며<br>차분하게 이어지는 향의 중심.</p></article><article class="note-card"><small>03 / BASE NOTE</small><h3>리코리스</h3><p>센슈얼하고 풍부한 리코리스의 향이<br>오래도록 남기는 깊은 여운.</p></article></div></section>
-<section class="home-feature"><div class="home-section feature-grid"><img src="assets/hero-midnight-gold.png" width="1254" height="1254" loading="lazy" alt="미드나잇 골드 보틀과 리미티드 에디션 패키지"><div class="feature-copy"><p class="eyebrow">AN OBJECT TO KEEP</p><h2>향을 담고,<br>기억으로 남는 황금 보틀</h2><p>황금빛 사과 보틀과 자정의 달을 품은 패키지.<br>향을 즐기는 순간부터 선반 위에 남는 순간까지,<br>일상에 특별한 장면을 더합니다.</p><a class="home-link" href="index.html#detail">리미티드 에디션 자세히 보기 <span aria-hidden="true">↗</span></a></div></div></section>
+<section class="home-feature" id="gift"><div class="home-section feature-grid"><img src="assets/hero-midnight-gold.png" width="1254" height="1254" loading="lazy" alt="미드나잇 골드 보틀과 리미티드 에디션 패키지"><div class="feature-copy"><p class="eyebrow">AN OBJECT TO KEEP</p><h2>향을 담고,<br>기억으로 남는 황금 보틀</h2><p>황금빛 사과 보틀과 자정의 달을 품은 패키지.<br>향을 즐기는 순간부터 선반 위에 남는 순간까지,<br>일상에 특별한 장면을 더합니다.</p><a class="home-link" href="index.html#detail">리미티드 에디션 자세히 보기 <span aria-hidden="true">↗</span></a></div></div></section>
 <section class="home-invite"><p class="eyebrow">BE THE FIRST TO KNOW</p><h2>자정의 특별한 소식을 만나보세요</h2><p>리미티드 에디션의 출시 소식을 확인하세요.</p><a href="index.html#apply">한정판 알림 받기</a></section>
 </main><footer class="home-footer"><b>LOLITA LEMPIKA</b><p>이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않습니다.</p></footer>
 </body></html>
