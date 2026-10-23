@@ -98,6 +98,9 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .rcard .opt{background:var(--soft);font-size:12px;color:#555;padding:8px 10px;margin:8px 0;display:inline-block;min-width:300px}
 .rcard .ph-row{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:140px}
 .rcard p{font-size:14px;margin:8px 0 0}
+.review-meta{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:16px 0 24px;color:#767676;font-size:12px}
+.review-rating{letter-spacing:2px;color:#E77979}.review-rating .review-empty{color:#D5D5DD}.review-rating .review-score{color:#767676;letter-spacing:0;margin-left:6px}
+.rcard .review-body{line-height:1.9;overflow-wrap:anywhere}
 /* 상품정보제공고시 */
 .notice{padding:60px 0 0}
 .notice h3{font-size:36px;font-weight:400;margin:0 0 20px}
@@ -187,9 +190,13 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
   <div class="nl" id="notes">TOP : 체리, 아니스<br>MIDDLE : 바이올렛<br>BASE : 리코리스<br></div>
   <a class="more" href="#notice">상품 정보 더보기 ⌄</a>
   <div class="reviews">
-    <h3>시향 후기 <span>★</span> <span class="todo">예시 후기 — 실제 후기 받으면 교체</span></h3>
-    <div class="rgrid"><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div></div>
-<div class="rcard"><b>★★★★★</b><br><span class="opt">상품 · MINUIT 오 드 퍼퓸 · 시향 샘플</span><div class="ph-row"><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div></div><p><span class="todo">시향 후기 1</span></p></div><div class="rcard"><b>★★★★★</b><br><span class="opt">상품 · MINUIT 오 드 퍼퓸 · 시향 샘플</span><div class="ph-row"><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div></div><p><span class="todo">시향 후기 2</span></p></div>  </div>
+    <h3>향수 리뷰 <span>★</span></h3>
+    <article class="rcard">
+      <b class="review-author">우비니하으니</b>
+      <div class="review-meta"><span class="review-rating" aria-label="별점 5점 만점에 3점"><span>★★★</span><span class="review-empty">☆☆</span> <span class="review-score">3</span></span><time datetime="2021-04-10">2021.04.10</time></div>
+      <p class="review-body">스무살되고 접해본 향수가 선물로 받아본 롤리타렘피카 향수였는데요~ 이제품은 선물로받아보고 향수병이 너무예뻐서 깜짝 놀랐어요🥰 뭔가 공주스런 사과모양? 느낌이 났던거 같아요🤭 특히 같이오는 미니어처가 진짜 귀엽더라고요🎁 ㅋㅋ 앙증맞게 생겨서 가방에넣고 다니면 그렇게 예쁘더라고요 ㅋㅋ 하지만 스무살에 롤리타 렘피카 제품을 뿌렸을때는 헉! 향이 엄청강하게 느껴지더라고요~ 되게 오묘한?향느낌에 무거운 느낌이라 어려웠던 향수였던거같아요😂 그래서 집에 고이 모셔놓고만있었는데요~ 나이가 좀들고 다시 이향기를 맡았을때는 너무 또 다시 잘어울리는? 향기가 나면서 성숙해지는 느낌이랄까요 ㅋㅋ 진정한 으른?이되었을때 어울렸던거 같아요🤣</p>
+    </article>
+  </div>
 </section>
 
 <section class="in notice" id="notice">
