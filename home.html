@@ -157,17 +157,17 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .hd nav a,.hd nav span{text-decoration:none}
 
 /* Perfume collection: five image slots */
-.perfume-collection{max-width:1440px;margin:0 auto;padding:72px 40px 88px}
-.collection-heading{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;border-bottom:1px solid #E9E7E3;padding-bottom:22px}
+.perfume-collection{width:100%;margin:0;padding:72px 0 88px}
+.collection-heading{display:flex;align-items:baseline;justify-content:space-between;margin:0 40px 32px;border-bottom:1px solid #E9E7E3;padding-bottom:22px}
 .collection-heading h2{font-family:"Noto Serif KR",serif;font-weight:400;font-size:32px;margin:0}.collection-heading span{font-size:12px;color:#8B8680;letter-spacing:.1em}
-.perfume-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px;list-style:none;margin:0;padding:0}
+.perfume-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;margin:0;padding:0}
 .perfume-tile{min-width:0}.perfume-tile>a{display:block;color:inherit;text-decoration:none}
 .perfume-image-slot{aspect-ratio:4/5;background:#F6F5F2;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .perfume-image-slot img{display:block;width:100%;height:100%;object-fit:contain}
 .perfume-placeholder{flex-direction:column;gap:12px;color:#A29A8D}.perfume-placeholder svg{width:44px;height:66px;stroke:#C9C2B7;fill:none;stroke-width:1}.perfume-placeholder span{font-size:11px;letter-spacing:.16em}
-.perfume-caption{padding:20px 4px 0}.perfume-caption small{display:block;color:#8C8170;font-size:10px;letter-spacing:.14em;margin-bottom:10px}.perfume-caption h3{font-size:15px;line-height:1.6;font-weight:400;margin:0 0 10px;word-break:keep-all}.perfume-caption p{font-size:13px;color:#59534C;margin:0}.perfume-tile--empty .perfume-caption h3{color:#9D968C}
+.perfume-caption{padding:20px 24px 32px}.perfume-caption small{display:block;color:#8C8170;font-size:10px;letter-spacing:.14em;margin-bottom:10px}.perfume-caption h3{font-size:15px;line-height:1.6;font-weight:400;margin:0 0 10px;word-break:keep-all}.perfume-caption p{font-size:13px;color:#59534C;margin:0}.perfume-tile--empty .perfume-caption h3{color:#9D968C}
 .perfume-tile>a:focus-visible{outline:2px solid #8C774A;outline-offset:5px}
-@media(max-width:860px){.perfume-collection{padding:48px 16px 56px}.collection-heading h2{font-size:26px}.perfume-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 12px}.perfume-caption{padding:14px 0 0}.perfume-caption h3{font-size:13px}.collection-heading span{font-size:10px}}
+@media(max-width:860px){.perfume-collection{padding:48px 0 56px}.collection-heading{margin-left:16px;margin-right:16px}.collection-heading h2{font-size:26px}.perfume-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}.perfume-caption{padding:14px 12px 24px}.perfume-caption h3{font-size:13px}.collection-heading span{font-size:10px}}
 </style></head>
 <body><div class="topbar"><div class="topbar-window"><div class="topbar-track"><div class="topbar-group"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div></div></div></div>
 <header class="hd"><div class="in">
@@ -198,9 +198,5 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 <li class="perfume-tile perfume-tile--empty" data-product-slot="4"><div class="perfume-image-slot perfume-placeholder" role="img" aria-label="제품 이미지 4 준비 중"><svg viewBox="0 0 44 66" aria-hidden="true"><path d="M17 5h10v10H17zM13 15h18v8H13zM9 23h26v37H9z"/><path d="M14 36h16M14 48h16"/></svg><span>IMAGE 04</span></div><div class="perfume-caption"><h3>제품 이미지 준비 중</h3></div></li>
 <li class="perfume-tile perfume-tile--empty" data-product-slot="5"><div class="perfume-image-slot perfume-placeholder" role="img" aria-label="제품 이미지 5 준비 중"><svg viewBox="0 0 44 66" aria-hidden="true"><path d="M17 5h10v10H17zM13 15h18v8H13zM9 23h26v37H9z"/><path d="M14 36h16M14 48h16"/></svg><span>IMAGE 05</span></div><div class="perfume-caption"><h3>제품 이미지 준비 중</h3></div></li>
 </ul></section>
-<section class="home-section" id="notes"><div class="section-head"><p class="eyebrow">THE SCENT OF MIDNIGHT</p><h2>천천히 깊어지는 자정의 향</h2><p>달콤한 첫인상부터 부드럽게 남는 여운까지.<br>구르망과 플로럴이 만나는 향의 이야기를 만나보세요.</p></div>
-<div class="note-grid"><article class="note-card"><small>01 / TOP NOTES</small><h3>체리 · 아니스</h3><p>달콤한 체리와 아니스가 열어주는<br>신비로운 향의 첫 순간.</p></article><article class="note-card"><small>02 / MIDDLE NOTE</small><h3>바이올렛</h3><p>부드러운 플로럴이 감싸며<br>차분하게 이어지는 향의 중심.</p></article><article class="note-card"><small>03 / BASE NOTE</small><h3>리코리스</h3><p>센슈얼하고 풍부한 리코리스의 향이<br>오래도록 남기는 깊은 여운.</p></article></div></section>
-<section class="home-feature" id="gift"><div class="home-section feature-grid"><img src="assets/hero-midnight-gold.png" width="1254" height="1254" loading="lazy" alt="미드나잇 골드 보틀과 리미티드 에디션 패키지"><div class="feature-copy"><p class="eyebrow">AN OBJECT TO KEEP</p><h2>향을 담고,<br>기억으로 남는 황금 보틀</h2><p>황금빛 사과 보틀과 자정의 달을 품은 패키지.<br>향을 즐기는 순간부터 선반 위에 남는 순간까지,<br>일상에 특별한 장면을 더합니다.</p><a class="home-link" href="index.html#detail">리미티드 에디션 자세히 보기 <span aria-hidden="true">↗</span></a></div></div></section>
-<section class="home-invite"><p class="eyebrow">BE THE FIRST TO KNOW</p><h2>자정의 특별한 소식을 만나보세요</h2><p>리미티드 에디션의 출시 소식을 확인하세요.</p><a href="index.html#apply">한정판 알림 받기</a></section>
 </main><footer class="home-footer"><b>LOLITA LEMPIKA</b><p>이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않습니다.</p></footer>
 </body></html>
