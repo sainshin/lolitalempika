@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>오프라인 매장 | 롤리타렘피카</title>
+<meta name="description" content="롤리타렘피카 오프라인 매장">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+KR:wght@400;500&display=swap">
+<style>
+:root{--brand:#302B5D;--ink:#111;--gray:#767676;--line:#E5E5E5;--soft:#F6F6F6;--sale:#E5352B}
+html,body{margin:0;padding:0}
+body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.5}
+.in{max-width:1440px;margin:0 auto;padding:0 40px}
+/* 헤더: 3번 롤리타 렘피카 상단 참고 (검정 띠, 가운데 큰 로고, 아래 대문자 메뉴 줄) */
+.topbar{background:#000;color:#fff;font-size:10pt;line-height:1.5;padding:12.5px 0;overflow:hidden}
+.topbar-window{max-width:1440px;margin:0 auto;overflow:hidden;container-type:inline-size}
+.topbar-track{display:flex;width:max-content;animation:banner-roll 45s linear infinite}
+.topbar-group{display:flex;flex:0 0 auto;align-items:center;gap:clamp(160px,30vw,500px);box-sizing:border-box;padding:0 32px;white-space:nowrap}
+@keyframes banner-roll{from{transform:translateX(100cqw)}to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.topbar-track{width:100%;animation:none}.topbar-group{min-width:0;width:100%;flex-wrap:wrap;white-space:normal;gap:4px 24px;padding:0 16px;text-align:center}.topbar-group[aria-hidden="true"]{display:none}}
+.hd{background:#fff;position:relative;z-index:20;border-bottom:1px solid var(--line)}
+.hd .row{height:96px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.hd .lang{grid-column:1;grid-row:1}
+.hd .logo{grid-column:2;grid-row:1;justify-self:center;display:block;line-height:0}
+.hd .logo img{display:block;width:132px;max-width:100%;height:auto;filter:brightness(0)}
+.hd .icons{grid-column:3;grid-row:1;min-width:0}
+.hd .lang{display:flex;align-items:center;gap:14px;font-size:12px}
+.hd .lang span{border:1px solid #CFCFCF;border-radius:4px;padding:6px 12px}
+.logo{font-size:34px;letter-spacing:.08em;font-weight:500;font-family:"Cormorant Garamond",serif;color:var(--brand);line-height:1;text-align:center}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;text-align:right;margin-top:2px}
+.icons{display:flex;justify-content:flex-end;gap:18px}
+.icons svg{width:20px;height:20px}
+.hd nav{display:flex;justify-content:center;gap:36px;font-size:12px;font-weight:700;letter-spacing:.04em;padding:20px 0 14px}
+/* 상품 상단 */
+.top{display:grid;grid-template-columns:760px 1fr;gap:0 40px;padding-top:0}
+.gal{background:var(--soft);margin-left:-40px;position:relative;align-self:start}
+.gal .hero-image{display:block;width:100%;height:auto}
+.gal .ph{background:var(--soft)}
+.dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
+.dots i{width:6px;height:6px;border-radius:50%;background:#C8C8C8}.dots i:first-child{background:var(--ink)}
+.info{padding-top:40px}
+.brand-row{font-size:12px;line-height:1.5;color:#767676;text-decoration:underline;text-underline-offset:5px}
+.info h1{font-size:28px;font-weight:700;line-height:1.4;letter-spacing:-.04em;margin:14px 0 0;word-break:keep-all}
+.state{display:inline-block;background:var(--brand);color:#fff;font-size:12px;padding:2px 8px}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin:28px 0 0;padding-bottom:20px}
+.price em{font-style:normal;color:var(--ink);font-size:24px;font-weight:700}
+.price b{font-size:28px;font-weight:700;line-height:1.4}
+.price del{color:#AAA;font-size:14px}
+.price small{color:#999;font-size:12px}
+.price .cp{margin-left:auto;background:var(--ink);color:#fff;font-size:14px;padding:6px 14px}
+.pt{display:flex;justify-content:space-between;padding:14px 0;font-size:14px;color:#555}
+.pt>span{flex:1;min-width:0;overflow-wrap:break-word}.pt a{flex-shrink:0;text-decoration:underline;margin-left:16px}
+.star{padding:2px 0 22px;border-bottom:1px solid var(--line);font-size:14px}
+.star a{text-decoration:underline;margin-left:6px}
+.total{display:flex;justify-content:space-between;align-items:center;padding:26px 0 18px;font-size:16px}
+.total b{font-size:24px}
+.buy{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.buy a{height:64px;display:flex;align-items:center;justify-content:center;font-size:18px;border-radius:4px}
+.buy .g{background:#E8E8E8;color:#333;text-decoration:none}.buy .k{background:var(--brand);color:#fff;text-decoration:none}
+.rows{margin-top:36px;border-top:1px solid #EAE7E4}
+.rows>div{display:grid;grid-template-columns:136px minmax(0,1fr);align-items:center;padding:15px 0;border-bottom:1px solid #EAE7E4;font-size:13px;line-height:1.4;color:#4D4946}
+.rows>div>b{font-size:12px;color:#817C77;font-weight:400}
+.rows .shipping-info{display:block;line-height:1.6;overflow-wrap:break-word}
+.shipping-info p{margin:0 0 6px}.shipping-info p:last-child{margin-bottom:0}
+.shipping-info strong{font-weight:600}
+.shipping-badge{display:flex;align-items:center;gap:5px;margin-bottom:4px;font-weight:600}
+.shipping-badge svg{width:20px;height:20px;flex:none}
+
+/* 배너 2개 */
+.bn{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.bn a{height:143px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;color:#fff}
+.bn a:first-child{background:var(--brand)}.bn a:last-child{background:#6E6A80}
+.bn b{display:block;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.bn span{font-size:21px}
+.bn i{width:150px;height:106px;flex:none}
+/* 탭 */
+.tabs{position:sticky;top:0;background:#fff;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border-bottom:0}
+.tabs a{text-align:center;height:68px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#A0A0A0;text-decoration:none}
+.tabs a.on{color:var(--ink);border-bottom:0}
+/* 상세: 2번 무신사 상세 참고 (공식 인증 띠 → 안내 블록 → 검정 공지 띠 → 키비주얼 → 더보기 → 사진 후기) */
+.detail{max-width:860px;margin:0 auto;padding:60px 0 40px;text-align:center}
+.official{display:flex;align-items:center;gap:24px;text-align:left;padding:30px;border-bottom:6px solid #111}
+.official i{width:150px;height:130px;background:#111;color:#fff;font-style:normal;font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.1;padding:18px;flex:none}
+.official b{display:block;font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:500}
+.official p{margin:6px 0 0;font-size:18px}
+.dblock{padding:60px 30px}
+.dblock h3{font-size:28px;margin:0 0 14px}
+.dblock p{font-size:20px;line-height:1.7;margin:0;color:#333}
+.dblock .box{display:inline-block;border:2px solid #111;padding:10px 26px;margin-top:20px;font-weight:700;font-size:15px}
+.dblock .card{width:150px;height:200px;margin:30px auto 0}
+.blackband{background:#111;color:#fff;padding:30px;font-size:22px;font-weight:600;line-height:1.6}
+.kv{height:720px}
+.kv .ph{background:#E9DCD3;color:#7A6A5C}
+.more{display:block;border:1px solid #111;padding:12px;margin:24px 0 0;font-size:14px}
+.nl{font-size:18px;line-height:2;color:#555;margin-top:40px}
+.reviews{text-align:left;margin-top:60px}
+.reviews h3{font-size:18px;margin:0 0 12px}
+.reviews h3 span{color:#F2A900}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.rgrid div{aspect-ratio:1}
+.rcard{border-bottom:1px solid var(--line);padding:20px 0}
+.rcard .opt{background:var(--soft);font-size:12px;color:#555;padding:8px 10px;margin:8px 0;display:inline-block;min-width:300px}
+.rcard .ph-row{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:140px}
+.rcard p{font-size:14px;margin:8px 0 0}
+.review-meta{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:16px 0 24px;color:#767676;font-size:12px}
+.review-rating{letter-spacing:2px;color:#E77979}.review-rating .review-empty{color:#D5D5DD}.review-rating .review-score{color:#767676;letter-spacing:0;margin-left:6px}
+.rcard .review-body{line-height:1.9;overflow-wrap:anywhere}
+/* 상품정보제공고시 */
+.notice{padding:60px 0 0}
+.notice h3{font-size:36px;font-weight:400;margin:0 0 20px}
+.notice table{width:100%;border-collapse:collapse;border-top:1px solid var(--ink);font-size:16px}
+.notice th{width:280px;text-align:left;font-weight:400;color:#555;padding:24px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.notice td{padding:24px 0;border-bottom:1px solid var(--line)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:30px 0 0}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:10px 16px;font-size:16px}
+/* 알림 신청 */
+.apply{padding:80px 0 100px}
+.apply-box{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
+.apply-box .side{padding:40px 40px 40px 0}
+.apply h3{font-size:44px;font-weight:400;margin:0 0 10px}
+.apply p{font-size:16px;color:#555;margin:0}
+.apply form{padding:40px 0}
+.field{display:block;margin-bottom:16px}
+.field span{display:block;font-size:16px;font-weight:700;margin-bottom:8px}
+.field input,.field select{width:100%;height:52px;border:1px solid #CFCFCF;padding:0 14px;font:inherit;font-size:16px;border-radius:0}
+.apply .safe-note{margin:8px 0 18px;border-radius:0}
+.submit{width:100%;height:64px;border:0;background:var(--brand);color:#fff;font-size:18px;border-radius:4px}
+.ft{background:var(--soft);padding:40px 0;font-size:14px;color:#555}
+.ft b{display:block;font-size:16px;color:var(--ink);margin-bottom:10px}
+.ft p{margin:0 0 6px}
+@media (max-width:860px){
+  .hd .logo img{width:105px}
+  .in{padding:0 16px}.hd nav a{display:none}.logo{font-size:20px}.icons svg:not(:last-child){display:none}
+  .top{grid-template-columns:1fr}.gal{margin:0 -16px}
+  .buy a{height:54px;font-size:16px}.rows>div{grid-template-columns:96px minmax(0,1fr);font-size:13px}
+  .bn{grid-template-columns:1fr;gap:10px;margin-top:24px}.bn a{height:100px;padding:0 20px}.bn b{font-size:20px}.bn span{font-size:15px}.bn i{width:90px;height:70px}
+  .tabs a{font-size:14px;height:52px}.tabs{top:0}
+  .official{flex-direction:column;text-align:center}.official b{font-size:30px}.dblock p,.blackband{font-size:16px}.kv{height:380px}.rgrid{grid-template-columns:repeat(2,1fr)}.rcard .opt{min-width:0}.hd .lang{display:none}.hd nav{gap:14px;font-size:11px;overflow-x:auto}.tabs{top:0}
+  .notice h3,.apply h3{font-size:26px}.notice th{width:110px;font-size:14px}.notice td{font-size:14px}
+  .apply-box{grid-template-columns:1fr}.apply-box .side{padding:30px 0 0}
+}
+
+*{box-sizing:border-box}a{color:inherit;text-decoration:none}body{margin:0}.hd nav{flex-wrap:wrap}
+.home-hero{display:grid;grid-template-columns:1fr 1fr;background:#171427;color:#F4EADA;align-items:center}
+.home-copy{padding:70px clamp(24px,6vw,100px)}.eyebrow{font-size:11px;letter-spacing:.23em;color:#BBA476;margin:0 0 24px}
+.home-copy h1{font-family:"Noto Serif KR",serif;font-weight:400;font-size:clamp(32px,3.7vw,58px);line-height:1.6;letter-spacing:-.04em;margin:0 0 24px}
+.home-copy p:not(.eyebrow){color:#D0C8BB;line-height:1.9;max-width:400px}
+.home-photo{display:block;width:100%;height:auto}
+.home-link{display:inline-flex;align-items:center;gap:40px;border-bottom:1px solid #BBA476;padding:14px 0;margin-top:28px;color:#E9D6AC;font-size:13px}
+.home-section{max-width:1200px;margin:auto;padding:100px 40px}.home-section h2{font-family:"Noto Serif KR",serif;font-size:30px;font-weight:400;line-height:1.6;margin:12px 0 24px}
+.section-head{text-align:center;max-width:700px;margin:0 auto 48px}.section-head p{color:#777;line-height:1.9}.section-head .eyebrow{color:#8F7748}
+.note-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}.note-card{padding:32px 12px;border-top:1px solid #DCD4C7}.note-card small{font-size:10px;letter-spacing:.2em;color:#8F7748}.note-card h3{font-family:"Noto Serif KR",serif;font-size:22px;font-weight:400;margin:20px 0 12px}.note-card p{font-size:14px;color:#777;line-height:1.9}
+.home-feature{background:#F5F1E9}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}.feature-grid img{display:block;width:100%;height:auto}.feature-copy p{line-height:1.9;color:#777}.feature-copy .home-link{color:#332C4B;border-color:#332C4B}
+.home-invite{padding:90px 24px;text-align:center;background:#28223D;color:#F5EADA}.home-invite h2{font-family:"Noto Serif KR",serif;font-weight:400;font-size:30px}.home-invite p{color:#CCC1D0}.home-invite a{display:inline-block;border:1px solid #BBA476;padding:16px 32px;margin-top:20px;color:#E9D6AC}
+.home-footer{padding:36px 24px;text-align:center;color:#888;font-size:12px}.home-footer b{color:#332C4B;letter-spacing:.1em}.home-footer p{margin:12px 0 0}
+@media(max-width:860px){.hd nav a{display:block}.hd nav{gap:18px;font-size:10px}.home-hero{grid-template-columns:1fr}.home-copy{padding:48px 24px}.home-photo{grid-row:1}.home-section{padding:64px 24px}.note-grid{grid-template-columns:1fr;gap:8px}.note-card{padding:24px 0}.feature-grid{grid-template-columns:1fr;gap:32px}.home-section h2,.home-invite h2{font-size:25px}.home-copy h1{font-size:34px}}
+.hd nav a,.hd nav span{text-decoration:none}
+.collection-page{max-width:1200px;margin:auto;padding:72px 40px 100px;min-height:60vh}.page-intro{text-align:center;margin:0 auto 56px;max-width:720px}.page-intro h1{font-family:"Noto Serif KR",serif;font-size:36px;font-weight:400;line-height:1.5}.page-intro p{color:#777;line-height:1.9}.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.gift-card img{width:100%;height:auto;display:block}.gift-card h2{font-size:16px;font-weight:500;margin:20px 0 10px}.gift-card p{font-size:14px;color:#777}.brand-story{max-width:720px;margin:auto}.brand-story h2{font-family:"Noto Serif KR",serif;font-weight:400;font-size:26px;margin:48px 0 18px}.brand-story p{color:#666;line-height:2}.store-empty{border-top:1px solid #EAE7E4;border-bottom:1px solid #EAE7E4;padding:72px 24px;text-align:center;color:#888}.store-empty h2{font-size:18px;font-weight:400;color:#555}@media(max-width:860px){.collection-page{padding:48px 24px 64px}.page-intro h1{font-size:28px}.gift-grid{grid-template-columns:1fr}.gift-card{max-width:480px}.hd nav{gap:16px}}
+</style></head>
+<body><div class="topbar"><div class="topbar-window"><div class="topbar-track"><div class="topbar-group"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div></div></div></div>
+<header class="hd"><div class="in">
+  <div class="row">
+    <div class="lang"><span>한국어 ⌄</span><b>f</b><b>◎</b></div>
+    <a class="logo" href="home.html" aria-label="Lolita Lempika 홈"><img src="assets/logo.png" width="1538" height="1022" alt="Lolita Lempika"></a>
+    <div class="icons" aria-hidden="true">
+      <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><path d="M5 8h16l-1.2 15H6.2z"/><path d="M9.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></svg>
+      <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><circle cx="11" cy="11" r="7.5"/><path d="M17 17l6 6"/></svg>
+      <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><circle cx="13" cy="9" r="4.5"/><path d="M4.5 23c1-5 4.4-7.5 8.5-7.5s7.5 2.5 8.5 7.5"/></svg>
+    </div>
+  </div>
+  <nav aria-label="메인 메뉴"><a href="home.html">PERFUME</a><a href="gift-set.html">GIFT SET</a><a href="brand.html">BRAND</a><a href="offline-store.html">OFFLINE STORE</a></nav>
+</div></header>
+
+
+<main class="collection-page"><div class="page-intro"><p class="eyebrow">OFFLINE STORE</p><h1>향을 만나는 공간</h1><p>롤리타렘피카 오프라인 매장.</p></div><section class="store-empty"><h2>매장 사진 준비 중</h2><p>매장 사진은 추후 안내됩니다.</p></section></main><footer class="home-footer"><b>LOLITA LEMPIKA</b><p>이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않습니다.</p></footer>
+</body></html>
