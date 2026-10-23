@@ -19,7 +19,11 @@ html,body{margin:0;padding:0}
 body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.5}
 .in{max-width:1440px;margin:0 auto;padding:0 40px}
 /* 헤더: 3번 롤리타 렘피카 상단 참고 (검정 띠, 가운데 큰 로고, 아래 대문자 메뉴 줄) */
-.topbar{background:#000;color:#fff;text-align:center;font-size:12px;padding:6px 0}
+.topbar{background:#000;color:#fff;font-size:12px;padding:6px 0;overflow:hidden}
+.topbar-track{display:flex;width:max-content;animation:banner-roll 45s linear infinite}
+.topbar-group{display:flex;flex:0 0 auto;align-items:center;justify-content:space-around;gap:clamp(64px,12vw,200px);min-width:100vw;box-sizing:border-box;padding:0 40px;white-space:nowrap}
+@keyframes banner-roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.topbar-track{width:100%;animation:none}.topbar-group{min-width:0;width:100%;flex-wrap:wrap;white-space:normal;gap:4px 24px;padding:0 16px;text-align:center}.topbar-group[aria-hidden="true"]{display:none}}
 .hd{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}
 .hd .row{height:96px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
 .hd .lang{grid-column:1;grid-row:1}
@@ -142,7 +146,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 <!-- Schema JSON-LD (Day 29) -->
 </head>
 <body>
-<div class="topbar">출시 알림 신청 시 리미티드 에디션 소식을 가장 먼저 보내 드려요</div>
+<div class="topbar"><div class="topbar-track"><div class="topbar-group"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div><div class="topbar-group" aria-hidden="true"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div></div></div>
 <header class="hd"><div class="in">
   <div class="row">
     <div class="lang"><span>한국어 ⌄</span><b>f</b><b>◎</b></div>
