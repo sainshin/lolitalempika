@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Serif+KR:wght@500&display=swap"><link rel="stylesheet" href="assets/base.css">
 <style>
 :root{--brand:#302B5D;--ink:#111;--gray:#767676;--line:#E5E5E5;--soft:#F6F6F6;--sale:#E5352B}
+html,body{margin:0;padding:0}
 body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.5}
 .in{max-width:1440px;margin:0 auto;padding:0 40px}
 /* 헤더: 3번 롤리타 렘피카 상단 참고 (검정 띠, 가운데 큰 로고, 아래 대문자 메뉴 줄) */
@@ -30,7 +31,8 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .hd nav{display:flex;justify-content:center;gap:36px;font-size:12px;font-weight:700;letter-spacing:.04em;padding:0 0 14px}
 /* 상품 상단 */
 .top{display:grid;grid-template-columns:760px 1fr;gap:0 40px;padding-top:0}
-.gal{background:var(--soft);height:800px;margin-left:-40px;position:relative}
+.gal{background:var(--soft);margin-left:-40px;position:relative;align-self:start}
+.gal .hero-image{display:block;width:100%;height:auto}
 .gal .ph{background:var(--soft)}
 .dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
 .dots i{width:6px;height:6px;border-radius:50%;background:#C8C8C8}.dots i:first-child{background:var(--ink)}
@@ -117,7 +119,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .ft p{margin:0 0 6px}
 @media (max-width:860px){
   .in{padding:0 16px}.hd nav a{display:none}.logo{font-size:20px}.icons svg:not(:last-child){display:none}
-  .top{grid-template-columns:1fr}.gal{height:420px;margin:0 -16px}
+  .top{grid-template-columns:1fr}.gal{margin:0 -16px}
   .buy a{height:54px;font-size:16px}.rows div{grid-template-columns:96px 1fr;font-size:14px}
   .bn{grid-template-columns:1fr;gap:10px;margin-top:24px}.bn a{height:100px;padding:0 20px}.bn b{font-size:20px}.bn span{font-size:15px}.bn i{width:90px;height:70px}
   .tabs a{font-size:14px;height:52px}.tabs{top:76px}
@@ -148,7 +150,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 
 <main>
 <div class="in top">
-  <div class="gal"><div class="ph "><span><span class="todo">히어로: 자정/골드 피드 이미지</span></span></div><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+  <div class="gal"><img class="hero-image" src="assets/hero-midnight-gold.png" width="1254" height="1254" alt="골드 향수 보틀과 자정의 달과 별이 장식된 롤리타 렘피카 패키지" fetchpriority="high" decoding="async"></div>
   <div class="info">
     <div class="brand-row">MINUIT <span aria-hidden="true">›</span></div>
     <h1>[리미티드] 미뉘 오 드 퍼퓸 <span class="todo">50ml</span></h1>
