@@ -184,7 +184,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 @media(max-width:860px){.perfume-grid{grid-template-columns:2fr 1fr 1fr;grid-template-areas:"featured second third" "featured fourth fifth"}.perfume-caption{padding:12px}.perfume-caption h3{font-size:11px;margin-bottom:4px}.perfume-caption small{font-size:8px;margin-bottom:4px}.perfume-caption p{font-size:11px}.perfume-tile--empty .perfume-caption{display:none}.perfume-placeholder svg{width:28px;height:42px}.perfume-placeholder span{font-size:9px}}
 
 /* Brand banner inspired by the Life On Earth reference */
-.earth-banner{--earth-background-image:none;height:384px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;isolation:isolate;clip-path:inset(0);color:#fff;background:#AFC8BB;padding:40px 20px}
+.earth-banner{--earth-background-image:url("assets/lolita-green-leaf-shadow.png");height:384px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;isolation:isolate;clip-path:inset(0);color:#fff;background:#AFC8BB;padding:40px 20px}
 .earth-banner::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-color:#AFC8BB;background-image:var(--earth-background-image);background-position:center;background-size:cover;background-repeat:no-repeat}
 @media(prefers-reduced-motion:reduce){.earth-banner::before{position:absolute}}
 .earth-banner__content{position:relative;z-index:1}
@@ -224,6 +224,8 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
 .perfume-grid [data-product-slot="4"] .perfume-image-slot img{height:69%;transform:translate(10%,-1%)}
 .perfume-grid [data-product-slot="5"] .perfume-image-slot img{height:67.5%;transform:translate(12%,-1%)}
 .perfume-grid [data-product-slot="1"] .perfume-image-slot img{width:80%;height:80%;object-fit:contain}
+
+.earth-banner{color:#343D28}.earth-banner__link{color:#343D28;border-color:#343D28}.earth-banner__link:focus-visible{outline-color:#343D28}
 </style></head>
 <body><div class="topbar"><div class="topbar-window"><div class="topbar-track"><div class="topbar-group"><span>5만원 이상 구매 시 무료 배송</span><span>모든 주문건당 선택 가능한 샘플 2개 증정</span></div></div></div></div>
 <header class="hd"><div class="in">
