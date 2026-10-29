@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MINUIT | 자정의 황금 보틀, 리미티드 에디션</title>
+<meta name="description" content="체리·아니스·바이올렛이 겹쳐지는 자정의 향. 리미티드 에디션 출시 알림을 받아 보세요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MINUIT | 자정의 황금 보틀, 리미티드 에디션">
+<meta property="og:description" content="체리·아니스·바이올렛이 겹쳐지는 자정의 향. 리미티드 에디션 출시 알림을 받아 보세요.">
+<meta property="og:image" content="https://YOUR-GITHUB-ID.github.io/assets/og.png">
+<meta property="og:url" content="https://YOUR-GITHUB-ID.github.io/">
+<link rel="canonical" href="https://YOUR-GITHUB-ID.github.io/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Serif+KR:wght@500&display=swap"><link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--brand:#302B5D;--ink:#111;--gray:#767676;--line:#E5E5E5;--soft:#F6F6F6;--sale:#E5352B}
+body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.5}
+.in{max-width:1440px;margin:0 auto;padding:0 40px}
+/* 헤더: 3번 롤리타 렘피카 상단 참고 (검정 띠, 가운데 큰 로고, 아래 대문자 메뉴 줄) */
+.topbar{background:#000;color:#fff;text-align:center;font-size:12px;padding:6px 0}
+.hd{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}
+.hd .row{height:96px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.hd .lang{display:flex;align-items:center;gap:14px;font-size:12px}
+.hd .lang span{border:1px solid #CFCFCF;border-radius:4px;padding:6px 12px}
+.logo{font-size:34px;letter-spacing:.08em;font-weight:500;font-family:"Cormorant Garamond",serif;color:var(--brand);line-height:1;text-align:center}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;text-align:right;margin-top:2px}
+.icons{display:flex;justify-content:flex-end;gap:18px}
+.icons svg{width:20px;height:20px}
+.hd nav{display:flex;justify-content:center;gap:36px;font-size:12px;font-weight:700;letter-spacing:.04em;padding:0 0 14px}
+/* 상품 상단 */
+.top{display:grid;grid-template-columns:760px 1fr;gap:0 40px;padding-top:0}
+.gal{background:var(--soft);height:800px;margin-left:-40px;position:relative}
+.gal .ph{background:var(--soft)}
+.dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
+.dots i{width:6px;height:6px;border-radius:50%;background:#C8C8C8}.dots i:first-child{background:var(--ink)}
+.info{padding-top:40px}
+.brand-row{display:flex;justify-content:space-between;font-size:20px}
+.brand-row span{color:#999}
+.info h1{font-size:20px;font-weight:400;margin:8px 0 12px}
+.state{display:inline-block;background:var(--brand);color:#fff;font-size:12px;padding:2px 8px}
+.price{display:flex;align-items:baseline;gap:10px;margin:22px 0 0;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.price em{font-style:normal;color:var(--sale);font-size:24px}
+.price b{font-size:24px}
+.price small{color:#999;font-size:16px}
+.price .cp{margin-left:auto;background:var(--ink);color:#fff;font-size:14px;padding:6px 14px}
+.pt{display:flex;justify-content:space-between;padding:14px 0;font-size:14px;color:#555}
+.pt a{text-decoration:underline}
+.star{padding:2px 0 22px;border-bottom:1px solid var(--line);font-size:14px}
+.star a{text-decoration:underline;margin-left:6px}
+.total{display:flex;justify-content:space-between;align-items:center;padding:26px 0 18px;font-size:16px}
+.total b{font-size:24px}
+.buy{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.buy a{height:64px;display:flex;align-items:center;justify-content:center;font-size:18px;border-radius:4px}
+.buy .g{background:#6D6D6D;color:#fff}.buy .k{background:var(--brand);color:#fff}
+.rows{margin-top:36px}
+.rows div{display:grid;grid-template-columns:120px 1fr;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px}
+.rows b{font-weight:700}
+/* 배너 2개 */
+.bn{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:0}
+.bn a{height:143px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;color:#fff}
+.bn a:first-child{background:var(--brand)}.bn a:last-child{background:#6E6A80}
+.bn b{display:block;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.bn span{font-size:21px}
+.bn i{width:150px;height:106px;flex:none}
+/* 탭 */
+.tabs{position:sticky;top:132px;background:#fff;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border-bottom:1px solid var(--line)}
+.tabs a{text-align:center;height:68px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#A0A0A0}
+.tabs a.on{color:var(--ink);border-bottom:2px solid var(--ink)}
+/* 상세: 2번 무신사 상세 참고 (공식 인증 띠 → 안내 블록 → 검정 공지 띠 → 키비주얼 → 더보기 → 사진 후기) */
+.detail{max-width:860px;margin:0 auto;padding:60px 0 40px;text-align:center}
+.official{display:flex;align-items:center;gap:24px;text-align:left;padding:30px;border-bottom:6px solid #111}
+.official i{width:150px;height:130px;background:#111;color:#fff;font-style:normal;font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.1;padding:18px;flex:none}
+.official b{display:block;font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:500}
+.official p{margin:6px 0 0;font-size:18px}
+.dblock{padding:60px 30px}
+.dblock h3{font-size:28px;margin:0 0 14px}
+.dblock p{font-size:20px;line-height:1.7;margin:0;color:#333}
+.dblock .box{display:inline-block;border:2px solid #111;padding:10px 26px;margin-top:20px;font-weight:700;font-size:15px}
+.dblock .card{width:150px;height:200px;margin:30px auto 0}
+.blackband{background:#111;color:#fff;padding:30px;font-size:22px;font-weight:600;line-height:1.6}
+.kv{height:720px}
+.kv .ph{background:#E9DCD3;color:#7A6A5C}
+.more{display:block;border:1px solid #111;padding:12px;margin:24px 0 0;font-size:14px}
+.nl{font-size:18px;line-height:2;color:#555;margin-top:40px}
+.reviews{text-align:left;margin-top:60px}
+.reviews h3{font-size:18px;margin:0 0 12px}
+.reviews h3 span{color:#F2A900}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.rgrid div{aspect-ratio:1}
+.rcard{border-bottom:1px solid var(--line);padding:20px 0}
+.rcard .opt{background:var(--soft);font-size:12px;color:#555;padding:8px 10px;margin:8px 0;display:inline-block;min-width:300px}
+.rcard .ph-row{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:140px}
+.rcard p{font-size:14px;margin:8px 0 0}
+/* 상품정보제공고시 */
+.notice{padding:60px 0 0}
+.notice h3{font-size:36px;font-weight:400;margin:0 0 20px}
+.notice table{width:100%;border-collapse:collapse;border-top:1px solid var(--ink);font-size:16px}
+.notice th{width:280px;text-align:left;font-weight:400;color:#555;padding:24px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.notice td{padding:24px 0;border-bottom:1px solid var(--line)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:30px 0 0}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:10px 16px;font-size:16px}
+/* 알림 신청 */
+.apply{padding:80px 0 100px}
+.apply-box{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
+.apply-box .side{padding:40px 40px 40px 0}
+.apply h3{font-size:44px;font-weight:400;margin:0 0 10px}
+.apply p{font-size:16px;color:#555;margin:0}
+.apply form{padding:40px 0}
+.field{display:block;margin-bottom:16px}
+.field span{display:block;font-size:16px;font-weight:700;margin-bottom:8px}
+.field input,.field select{width:100%;height:52px;border:1px solid #CFCFCF;padding:0 14px;font:inherit;font-size:16px;border-radius:0}
+.apply .safe-note{margin:8px 0 18px;border-radius:0}
+.submit{width:100%;height:64px;border:0;background:var(--brand);color:#fff;font-size:18px;border-radius:4px}
+.ft{background:var(--soft);padding:40px 0;font-size:14px;color:#555}
+.ft b{display:block;font-size:16px;color:var(--ink);margin-bottom:10px}
+.ft p{margin:0 0 6px}
+@media (max-width:860px){
+  .in{padding:0 16px}.hd nav a{display:none}.logo{font-size:20px}.icons svg:not(:last-child){display:none}
+  .top{grid-template-columns:1fr}.gal{height:420px;margin:0 -16px}
+  .buy a{height:54px;font-size:16px}.rows div{grid-template-columns:96px 1fr;font-size:14px}
+  .bn{grid-template-columns:1fr;gap:10px;margin-top:24px}.bn a{height:100px;padding:0 20px}.bn b{font-size:20px}.bn span{font-size:15px}.bn i{width:90px;height:70px}
+  .tabs a{font-size:14px;height:52px}.tabs{top:76px}
+  .official{flex-direction:column;text-align:center}.official b{font-size:30px}.dblock p,.blackband{font-size:16px}.kv{height:380px}.rgrid{grid-template-columns:repeat(2,1fr)}.rcard .opt{min-width:0}.hd .lang{display:none}.hd nav{gap:14px;font-size:11px;overflow-x:auto}.tabs{top:120px}
+  .notice h3,.apply h3{font-size:26px}.notice th{width:110px;font-size:14px}.notice td{font-size:14px}
+  .apply-box{grid-template-columns:1fr}.apply-box .side{padding:30px 0 0}
+}
+</style>
+<!-- GA4 (Day 34에 여기에 붙이기) -->
+<!-- Meta Pixel (Day 35에 여기에 붙이기) -->
+<!-- Microsoft Clarity (Day 38에 여기에 붙이기) -->
+<!-- Schema JSON-LD (Day 29) -->
+</head>
+<body>
+<div class="topbar">출시 알림 신청 시 리미티드 에디션 소식을 가장 먼저 보내 드려요</div>
+<header class="hd"><div class="in">
+  <div class="row">
+    <div class="lang"><span>한국어 ⌄</span><b>f</b><b>◎</b></div>
+    <a class="logo" href="./">MINUIT<small>PARIS</small></a>
+    <div class="icons" aria-hidden="true">
+      <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><path d="M5 8h16l-1.2 15H6.2z"/><path d="M9.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></svg>
+      <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><circle cx="11" cy="11" r="7.5"/><path d="M17 17l6 6"/></svg>
+      <svg viewBox="0 0 26 26" fill="none" stroke="#111" stroke-width="1.6"><circle cx="13" cy="9" r="4.5"/><path d="M4.5 23c1-5 4.4-7.5 8.5-7.5s7.5 2.5 8.5 7.5"/></svg>
+    </div>
+  </div>
+  <nav><a href="#detail">PARFUMS ⌄</a><a href="#notes">NOTES</a><a href="#detail">LA MAISON</a><a href="#notice">DETAILS</a><a href="#apply">출시 알림</a></nav>
+</div></header>
+
+<main>
+<div class="in top">
+  <div class="gal"><div class="ph "><span><span class="todo">히어로: 자정/골드 피드 이미지</span></span></div><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+  <div class="info">
+    <div class="brand-row">MINUIT <span aria-hidden="true">›</span></div>
+    <h1>[리미티드] 미뉘 오 드 퍼퓸 <span class="todo">50ml</span></h1>
+    <span class="state">출시 예정</span>
+    <div class="price"><b><span class="todo">가격</span></b><small>정가 미정</small><a class="cp" href="#apply">↓ 알림 신청</a></div>
+    <div class="pt"><span>자정에만 피어나는 향, 황금 보틀에 담다</span><a href="#notes">향 노트 보기</a></div>
+    <div class="star">향 계열 구르망 · 플로럴<a href="#detail">향 이야기</a></div>
+    <div class="total"><span>출시 알림</span><b>무료</b></div>
+    <div class="buy"><a class="g" href="#detail">향 이야기 보기</a><a class="k" href="#apply" id="cta-main">한정판 알림 받기</a></div>
+    <div class="rows">
+<div><b>향 계열</b><span>구르망 · 플로럴</span></div><div><b>배송</b><span>출시 후 순차 안내</span></div>      <div><b>보틀</b><span>황금빛 사과 보틀 · 오브제 소장</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="in bn">
+  <a href="#notes"><div><b>체리 · 아니스 · 바이올렛</b><span>자정의 향, 노트별로 미리 보기</span></div><i><div class="ph "><span>향 원료 사진</span></div></i></a>
+  <a href="#detail"><div><b>황금 사과 보틀</b><span>다 쓴 뒤에도 남는 오브제</span></div><i><div class="ph "><span>보틀 사진</span></div></i></a>
+</div>
+
+<nav class="in tabs" aria-label="상품 탭"><a href="#detail" class="on">상품 설명</a><a href="#notes">향 노트</a><a href="#notice">Q&amp;A</a><a href="#apply">알림 신청</a></nav>
+
+<section class="detail" id="detail">
+  <div class="official"><i>Official Product of MINUIT</i><div><b>MINUIT beauté</b><p>리미티드 에디션 공식 출시 알림 페이지입니다.<br>출시 소식은 알림 신청자에게 가장 먼저 안내됩니다.</p></div></div>
+  <div class="dblock"><h3>자정, 숲 속에서 피어나는 향</h3><p>체리와 아니스의 달콤함 위로 바이올렛과 리코리스가 천천히 깊어집니다.</p><span class="box">MINUIT 리미티드 에디션<br><span class="todo">50ml</span></span></div>
+  <div class="dblock" style="border-top:1px solid var(--line)"><h3>선반 위에 남는 황금 사과</h3><p>향을 다 쓴 뒤에도 보틀은 오브제로 남습니다.</p><div class="card"><div class="ph "><span><span class="todo">보틀 클로즈업</span></span></div></div></div>
+  <div class="blackband">출시 알림을 신청하신 분께만<br>리미티드 에디션 오픈 소식을 먼저 보내 드립니다.</div>
+  <div class="kv"><div class="ph "><span><span class="todo">자정/골드 피드 이미지</span></span></div></div>
+  <div class="nl" id="notes">TOP : 체리, 아니스<br>MIDDLE : 바이올렛<br>BASE : 리코리스<br></div>
+  <a class="more" href="#notice">상품 정보 더보기 ⌄</a>
+  <div class="reviews">
+    <h3>시향 후기 <span>★</span> <span class="todo">예시 후기 — 실제 후기 받으면 교체</span></h3>
+    <div class="rgrid"><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div></div>
+<div class="rcard"><b>★★★★★</b><br><span class="opt">상품 · MINUIT 오 드 퍼퓸 · 시향 샘플</span><div class="ph-row"><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div></div><p><span class="todo">시향 후기 1</span></p></div><div class="rcard"><b>★★★★★</b><br><span class="opt">상품 · MINUIT 오 드 퍼퓸 · 시향 샘플</span><div class="ph-row"><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div></div><p><span class="todo">시향 후기 2</span></p></div>  </div>
+</section>
+
+<section class="in notice" id="notice">
+  <h3>상품정보제공고시</h3>
+  <table>
+    <tr><th>상품명</th><td>MINUIT 오 드 퍼퓸 (리미티드)</td></tr>
+    <tr><th>상품의 특징</th><td>체리와 아니스, 바이올렛과 리코리스가 겹쳐지는 니치 향수. 오브제처럼 소장하는 리미티드 에디션입니다.</td></tr>
+<tr><th>TOP</th><td>체리, 아니스</td></tr><tr><th>MIDDLE</th><td>바이올렛</td></tr><tr><th>BASE</th><td>리코리스</td></tr><tr><th>용량·가격</th><td><span class="todo">용량 / 가격</span></td></tr><tr><th>보틀</th><td>황금빛 사과 보틀. 다 쓴 뒤에도 오브제로 남습니다.</td></tr><tr><th>구매 전 확인</th><td><span class="todo">교환·반품 안내</span></td></tr>  </table>
+  <div class="tags"><span>#자정의향</span><span>#구르망플로럴</span><span>#리미티드에디션</span><span>#오브제보틀</span><span>#선물하기좋은향</span></div>
+</section>
+
+<section class="in apply" id="apply">
+  <div class="apply-box">
+    <div class="side"><h3>출시 알림 신청</h3><p>리미티드 에디션 소식을 가장 먼저 받아 보세요.</p></div>
+    <form id="lead-form" action="result.html" method="get" autocomplete="off" novalidate>
+      <label class="field"><span>이름</span><input id="f-name" type="text" required maxlength="20" placeholder="홍길동"></label>
+<label class="field"><span>이메일</span><input id="f-contact" type="email" required placeholder="example@email.com"></label>
+
+      <div class="safe-note"><span aria-hidden="true">🔒</span><div>입력한 정보는 <b>어디에도 전송·저장되지 않고</b> 완료 즉시 지워집니다. <button type="button" data-privacy-open>자세히 보기</button></div></div>
+      <button class="submit" type="submit" id="cta-submit">한정판 알림 받기</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft"><div class="in"><b>MINUIT</b><p>이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않으며, 표기된 수치·후기는 예시입니다.</p><p><a href="#" data-privacy-open style="text-decoration:underline">개인정보 처리 안내</a></p></div></footer>
+<div class="modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-hidden="true">
+  <div class="modal-box">
+    <span class="badge">개인정보 미수집 · 즉시 파기</span>
+    <h2 id="privacy-title">개인정보 처리 안내</h2>
+    <ol>
+      <li><strong>입력하신 정보는 절대 저장하지 않습니다.</strong> 서버, 데이터베이스, 스프레드시트, 이메일, 외부 서비스 어디로도 전송되지 않습니다.</li>
+      <li>입력값은 이 브라우저 화면에만 잠시 머물며, 완료 버튼을 누르는 <strong>즉시 화면에서 지워집니다.</strong> 쿠키나 브라우저 저장소에도 남기지 않습니다.</li>
+      <li>페이지 제작자와 강사를 포함한 <strong>누구도 입력값을 볼 수 없습니다.</strong></li>
+    </ol>
+    <label><input type="checkbox" id="privacy-agree"> 위 내용을 확인했으며, 입력값이 저장되지 않고 즉시 파기된다는 점에 동의합니다.</label>
+    <div class="modal-actions">
+      <button type="button" class="cancel" id="privacy-cancel">닫기</button>
+      <button type="button" class="ok" id="privacy-ok" disabled>확인했습니다</button>
+    </div>
+  </div>
+</div><script src="assets/privacy.js"></script>
+</body>
+</html>
