@@ -42,7 +42,24 @@
   if (typeof window.gtag !== 'function') {
     window.gtag = function () { window.dataLayer.push(arguments); };
   }
-  function send(name, params) { window.gtag('event', name, params || {}); }
+  var metaEventNames = {
+    generate_lead: 'Lead',
+    sign_up: 'CompleteRegistration',
+    contact_click: 'Contact',
+    view_item: 'ViewContent',
+    add_to_cart: 'AddToCart',
+    begin_checkout: 'InitiateCheckout',
+    purchase: 'Purchase',
+    search: 'Search'
+  };
+  function send(name, params) {
+    window.gtag('event', name, params || {});
+    if (window.fbq && name !== 'page_view' && !/scroll/i.test(name)) {
+      if (name === 'purchase') fbq('track', 'Purchase', { value: params && params.value, currency: 'KRW' });
+      else if (Object.prototype.hasOwnProperty.call(metaEventNames, name)) fbq('track', metaEventNames[name]);
+      else fbq('trackCustom', name);
+    }
+  }
 
   var status = { id: ID, mode: '', tags: 0 };
 
@@ -118,6 +135,11 @@
   }
   function sendEasy(name, params) {
     window.gtag('event', name, params || {});
+    if (window.fbq && name !== 'page_view' && !/scroll/i.test(name)) {
+      if (name === 'purchase') fbq('track', 'Purchase', { value: params && params.value, currency: 'KRW' });
+      else if (Object.prototype.hasOwnProperty.call(metaEventNames, name)) fbq('track', metaEventNames[name]);
+      else fbq('trackCustom', name);
+    }
     var last = window.dataLayer[window.dataLayer.length - 1];
     if (last && last[0] === 'event') last.__easy = true;
   }
