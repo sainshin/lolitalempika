@@ -1,8 +1,16 @@
-.gal.product-gallery{height:auto;min-width:0;background:#f3e5d0;align-self:start}
-.product-gallery>img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
-.product-thumbnails{display:flex;justify-content:center;gap:12px;padding:12px}
-.product-thumbnails button{width:68px;padding:3px;border:2px solid transparent;background:#fff;cursor:pointer}
-.product-thumbnails button[aria-pressed="true"]{border-color:#846329}
+:root{--page:#f1e3d1;--surface:#f6eddf;--soft:#f6eddf}
+body,.hd,.tabs,.ft{background:var(--page)}
+.gal.product-gallery{display:flex;flex-direction:column;gap:14px;height:auto;min-width:0;margin:0;background:none;align-self:start}
+.product-main-frame{position:relative;width:100%;aspect-ratio:1;overflow:hidden;background:var(--surface);touch-action:pan-y}
+.product-main-frame>img{display:block;width:100%;height:100%;object-fit:contain}
+.product-thumbnails{display:flex;justify-content:center;gap:8px;padding:0}
+.product-thumbnails button{width:48px;height:48px;padding:0;border:1px solid transparent;background:var(--surface);cursor:pointer}
+.product-thumbnails button[aria-pressed="true"]{border-color:#3b332b}
 .product-thumbnails button:focus-visible{outline:3px solid #302b5d;outline-offset:3px}
-.product-thumbnails img{display:block;width:100%;height:auto}
-@media(max-width:860px){.gal.product-gallery{height:auto}}
+.product-thumbnails img{display:block;width:100%;height:100%;object-fit:cover}
+.gallery-step{position:absolute;top:0;bottom:0;width:50%;padding:0;border:0;background:transparent;z-index:1}
+.gallery-prev{left:0;cursor:url("cursor-left.svg") 32 32,w-resize}
+.gallery-next{right:0;cursor:url("cursor-right.svg") 32 32,e-resize}
+.gallery-step:focus-visible{outline:2px solid #7c6645;outline-offset:-5px}
+.gallery-counter{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);padding:5px 10px;background:#f1e3d1db;color:#2e2923;font-size:10px;pointer-events:none;z-index:2}
+@media(max-width:760px){.product-thumbnails button{width:42px;height:42px}}
