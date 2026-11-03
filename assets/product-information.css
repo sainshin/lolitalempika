@@ -1,12 +1,12 @@
 .product-accordions{margin-top:18px}
 .product-accordion{background:var(--surface);margin:0 0 10px;border:0;padding:0}
-.product-accordion summary{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;cursor:pointer;list-style:none;font-family:inherit;font-size:14px;font-weight:500;line-height:1.5}
-.product-accordion:first-child summary{font-family:inherit;font-size:14px;font-weight:500}
+.product-accordion summary{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;cursor:pointer;list-style:none;font-family:inherit;font-size:15px;font-weight:500;line-height:1.5}
+.product-accordion:first-child summary{font-family:inherit;font-size:15px;font-weight:500}
 .product-accordion summary::-webkit-details-marker{display:none}
-.product-accordion summary:after{content:'+';font-family:inherit;font-size:14px;font-weight:400;color:#857968}
+.product-accordion summary:after{content:'+';font-family:inherit;font-size:15px;font-weight:400;color:#857968}
 .product-accordion[open] summary:after{content:'−'}
 .product-accordion summary:focus-visible{outline:2px solid #7c6645;outline-offset:4px}
-.product-accordion .accordion-copy{padding:0 20px 20px;color:#6f6252;font-size:13px;line-height:1.85}
+.product-accordion .accordion-copy{padding:0 20px 20px;color:#6f6252;font-size:15px;line-height:1.85}
 .product-accordion .accordion-copy p{margin:0 0 10px}
 .product-accordion .accordion-copy p:last-child{margin:0}
 .product-accordion .accordion-copy dl{margin:0}
