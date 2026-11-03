@@ -134,6 +134,8 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var
   .apply-box{grid-template-columns:1fr}.apply-box .side{padding:30px 0 0}
 }
 </style>
+<link rel="stylesheet" href="assets/product-gallery.css">
+<script src="assets/product-gallery.js" defer></script>
 <!-- GA4 (Day 34에 여기에 붙이기) -->
 <!-- Meta Pixel (Day 35에 여기에 붙이기) -->
 <!-- Microsoft Clarity (Day 38에 여기에 붙이기) -->
@@ -173,7 +175,13 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
 
 <main>
 <div class="in top">
-  <div class="gal"><div class="ph "><span><span class="todo">히어로: 자정/골드 피드 이미지</span></span></div><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+  <div class="gal product-gallery" aria-label="상품 이미지">
+    <img id="product-main-image" src="assets/main-image-1.png" width="1254" height="1254" alt="아이보리 배경 위 황금빛 향수 보틀과 체리, 꽃" fetchpriority="high">
+    <div class="product-thumbnails" aria-label="메인이미지 선택">
+      <button type="button" aria-label="메인이미지 1" aria-pressed="true" data-product-image="assets/main-image-1.png" data-product-alt="아이보리 배경 위 황금빛 향수 보틀과 체리, 꽃"><img src="assets/main-image-1.png" width="1254" height="1254" alt=""></button>
+      <button type="button" aria-label="메인이미지 2" aria-pressed="false" data-product-image="assets/main-image-2.png" data-product-alt="골드 하트 향수 보틀과 리미티드 에디션 패키지"><img src="assets/main-image-2.png" width="1254" height="1254" alt=""></button>
+    </div>
+  </div>
   <div class="info">
     <div class="brand-row">MINUIT <span aria-hidden="true">›</span></div>
     <h1>[리미티드] 미뉘 오 드 퍼퓸 <span class="todo">50ml</span></h1>
