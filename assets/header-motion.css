@@ -1,4 +1,6 @@
-.hd{padding-top:8px;transition:transform .35s ease;will-change:transform;box-shadow:0 4px 18px #0000000a}
+.hd{padding-top:8px;transition:transform .35s ease;will-change:transform;border-bottom:1px solid #d7c8b8;box-shadow:0 4px 18px #0000000a}
+.top{padding-top:64px}
+@media(max-width:760px){.top{padding-top:40px}}
 .hd.is-hidden{transform:translateY(-100%);pointer-events:none;box-shadow:none}
 .hd:focus-within{transform:translateY(0);pointer-events:auto;box-shadow:0 4px 18px #0000000a}
 .announcement-window{max-width:1360px;width:calc(100% - 80px);margin:0 auto;overflow:hidden}
