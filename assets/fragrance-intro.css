@@ -20,14 +20,14 @@
 .scent-img-musk{width:66%;right:0;top:0;opacity:.9}
 .scent-label{font-size:12px;font-weight:500;line-height:1.5;letter-spacing:.08em;color:#78644d;margin:0 0 12px}
 .scent-intro h3{font-size:24px;font-weight:600;line-height:1.4;letter-spacing:-.02em;margin:0 0 12px;word-break:keep-all}
-.scent-ingredients{font-size:14px;font-weight:500;line-height:1.7;margin:0 0 20px;color:#78644d;word-break:keep-all}
-.scent-description{font-size:22px;font-weight:400;line-height:1.7;margin:0;color:#51483d;word-break:keep-all}
-@media(max-width:860px){.scent-description{font-size:16px}}
+.scent-ingredients{font-size:28px;font-weight:500;line-height:1.7;margin:0 0 20px;color:#78644d;word-break:keep-all}
+.scent-description{font-size:24px;font-weight:400;line-height:1.7;margin:0;color:#51483d;word-break:keep-all}
+@media(max-width:860px){.scent-ingredients{font-size:22px}.scent-description{font-size:20px}}
 @media(max-width:600px){
  .scent-intro{padding:64px 24px 48px}.scent-intro-head{margin-bottom:40px}
  .scent-intro h2{font-size:24px}.scent-intro h3{font-size:20px}
  .scent-chapter{gap:28px;margin-top:56px}
  .scent-art{height:270px;width:100%;max-width:340px;margin:auto}
  .scent-middle .scent-art,.scent-middle .scent-copy{order:initial}.scent-middle .scent-copy{padding-left:0}
- .scent-copy{min-width:0}.scent-description{font-size:16px}.scent-ingredients{margin-bottom:16px}
+ .scent-copy{min-width:0}.scent-description{font-size:16px}.scent-ingredients{font-size:18px;margin-bottom:16px}
 }
