@@ -21,7 +21,8 @@
 .scent-label{font-size:12px;font-weight:500;line-height:1.5;letter-spacing:.08em;color:#78644d;margin:0 0 12px}
 .scent-intro h3{font-size:24px;font-weight:600;line-height:1.4;letter-spacing:-.02em;margin:0 0 12px;word-break:keep-all}
 .scent-ingredients{font-size:14px;font-weight:500;line-height:1.7;margin:0 0 20px;color:#78644d;word-break:keep-all}
-.scent-description{font-size:16px;font-weight:400;line-height:1.7;margin:0;color:#51483d;word-break:keep-all}
+.scent-description{font-size:22px;font-weight:400;line-height:1.7;margin:0;color:#51483d;word-break:keep-all}
+@media(max-width:860px){.scent-description{font-size:16px}}
 @media(max-width:600px){
  .scent-intro{padding:64px 24px 48px}.scent-intro-head{margin-bottom:40px}
  .scent-english{font-size:32px}.scent-intro h2{font-size:24px}.scent-intro h3{font-size:20px}
