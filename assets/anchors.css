@@ -1,0 +1,18 @@
+/* Shared anchor navigation only. No scroll-padding; offsets must not add up. */
+:root { --anchor-offset: 16px; }
+html { scroll-behavior: smooth; }
+
+/* The announcement scrolls away; only the sticky header covers anchors. */
+body:has(> header.hd) { --anchor-offset: 153px; } /* 137px header + 16px */
+section[id], [id].anchor { scroll-margin-top: var(--anchor-offset); }
+
+@media (max-width: 768px) {
+  body:has(> header.hd) { --anchor-offset: 135px; } /* 119px header + 16px */
+}
+/* The existing mobile header already starts at 860px. */
+@media (min-width: 769px) and (max-width: 860px) {
+  body:has(> header.hd) { --anchor-offset: 135px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
