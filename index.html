@@ -171,6 +171,28 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <link rel="stylesheet" href="assets/fragrance-intro.css?v=scent-outline-15">
+<style>
+.review-editor{margin:24px 0;padding:24px;background:#f7f7f8;border:1px solid #e5e5e5;text-align:left}
+.review-editor summary{font-size:18px;font-weight:700;cursor:pointer}
+.review-editor p{font-size:13px;color:#666;line-height:1.7}
+#review-entry{display:grid;gap:16px;margin-top:20px}
+#review-entry label{display:grid;gap:8px;font-weight:600}
+#review-entry input:not([type=checkbox]),#review-entry textarea{width:100%;min-width:0;padding:12px;border:1px solid #ccc;background:white;font:inherit;box-sizing:border-box}
+#review-entry .review-check{display:flex;align-items:center;font-size:14px}
+#review-entry button{width:fit-content;max-width:100%;padding:12px 20px;border:1px solid #302b5d;background:#fff;color:#302b5d}
+#review-entry button[type=submit]{background:#302b5d;color:white}
+#review-local-list .review-meta{flex-wrap:wrap;gap:10px}
+#review-local-list .review-copy{white-space:pre-wrap;overflow-wrap:anywhere}
+.review-example{font-size:12px;color:#665412;background:#fff4cd;padding:3px 8px}
+</style>
+<style>
+.imported-text-review .review-meta{flex-wrap:wrap;gap:12px}
+.review-import-note{font-size:13px;color:#666;line-height:1.7;margin:28px 0 8px}
+.review-placeholder{margin:18px 0 0;width:120px;max-width:100%}
+.review-placeholder img{width:100%;height:auto}
+.review-placeholder figcaption{font-size:11px;color:#767676;margin-top:6px;line-height:1.5}
+.imported-text-review .review-copy{overflow-wrap:anywhere}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="announcement-window"><div class="announcement-track"><span>출시 알림 신청 시 리미티드 에디션 소식을 가장 먼저 보내 드려요</span><span aria-hidden="true">출시 알림 신청 시 리미티드 에디션 소식을 가장 먼저 보내 드려요</span></div></div></div>
@@ -243,15 +265,119 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
 
   <a class="more" href="#notice" data-ga="select_content" data-ga-content-type="product_information" data-ga-item-id="product_notice" data-ga-content-location="detail">상품 정보 더보기 ⌄</a>
   <div class="reviews anchor" id="reviews">
-    <h3>시향 후기 <span>★</span> <span class="todo">예시 후기 — 실제 후기 받으면 교체</span></h3>
+    <h3>시향 후기 <span>★</span></h3>
+
+    <details class="review-editor" open>
+      <summary>시향 후기 작성</summary>
+      <p>작성일자와 닉네임은 임의로 입력됩니다. 각 입력칸에서 수정할 수 있습니다.</p>
+      <form id="review-entry">
+        <label>작성일자<input id="review-date" type="date" min="2024-03-18" max="2026-10-31" required></label>
+        <label>닉네임<input id="review-name" type="text" minlength="3" maxlength="6" required></label>
+        <button type="button" id="review-random">날짜·닉네임 다시 생성</button>
+        <label class="review-check"><input id="review-buyer" type="checkbox"> 네이버페이 구매자 (예시 표시)</label>
+        <label>후기글<textarea id="review-body" rows="5" maxlength="5000" required placeholder="시향 후기를 입력해주세요."></textarea></label>
+        <label>첨부사진<input id="review-file" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <p>사진이 없으면 상품 가안 이미지가 표시됩니다. 작성 내용은 이 브라우저에만 저장되며 다른 방문자에게 공개되지 않습니다.</p>
+        <button type="submit">예시 후기 저장</button>
+        <p id="review-message" role="status"></p>
+      </form>
+    </details>
+    <div id="review-local-list"></div>
     <article class="rcard" aria-label="하이얀눈사람의 상품후기">
       <div class="review-meta"><b>하이얀눈사람</b><time datetime="2026-05-03">26.05.03</time></div>
       <img class="review-photo" src="assets/review-haiyan-snowman.png" width="1086" height="1448" alt="초록 나무 앞에서 손에 든 롤리타 렘피카 황금빛 르 퍼퓸 보틀" loading="lazy" decoding="async">
       <p class="review-copy">롤리타렘피카 르퍼퓸이 20년전에 쓰던 그 향하고 동일하고, 롤리타렘피카는 르퍼퓸이 단종되면서 나온건데 이게 많이 아쉬웠거든요.</p>
       <p class="review-copy">아무튼 예전에는 이거 사러 백화점 갔었는데, 그냥 홈페이지에서 클릭으로 구매할 수 있어서 너무 좋아요!!! 빠른 배송 좋은 상품 감사합니다!!</p>
     </article>
-    <div class="rgrid"><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div><div><div class="ph "><span>후기 사진</span></div></div></div>
-<div class="rcard"><b>★★★★★</b><br><span class="opt">상품 · MINUIT 오 드 퍼퓸 · 시향 샘플</span><div class="ph-row"><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div></div><p><span class="todo">시향 후기 1</span></p></div><div class="rcard"><b>★★★★★</b><br><span class="opt">상품 · MINUIT 오 드 퍼퓸 · 시향 샘플</span><div class="ph-row"><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div><div class="ph "><span></span></div></div><p><span class="todo">시향 후기 2</span></p></div>  </div>
+    <section id="imported-text-reviews" aria-label="텍스트 시향 후기">
+      <p class="review-import-note">텍스트 후기 17건 · 작성일자와 닉네임은 임의로 생성한 예시 정보입니다.</p>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-05-20">2025.05.20</time><b>구름나무</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">스무살되고 접해본 향수가 선물로 받아본 롤리타렘피카 향수였는데요~ 이제품은 선물로받아보고 향수병이 너무예뻐서 깜짝 놀랐어요🥰 뭔가 공주스런 사과모양? 느낌이 났던거 같아요🤭 특히 같이오는 미니어처가 진짜 귀엽더라고요🎁 ㅋㅋ 앙증맞게 생겨서 가방에넣고 다니면 그렇게 예쁘더라고요 ㅋㅋ 하지만 스무살에 롤리타 렘피카 제품을 뿌렸을때는 헉! 향이 엄청강하게 느껴지더라고요~ 되게 오묘한?향느낌에 무거운 느낌이라 어려웠던 향수였던거같아요😂 그래서 집에 고이 모셔놓고만있었는데요~ 나이가 좀들고 다시 이향기를 맡았을때는 너무 또 다시 잘어울리는? 향기가 나면서 성숙해지는 느낌이랄까요 ㅋㅋ 진정한 으른?이되었을때 어울렸던거 같아요🤣</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-07-27">2026.07.27</time><b>초록나무</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">선물해줬는데 향 완전 좋아여 몰래 쓴적도 있다능.. 최근에 또 사고싶었어요 향 굿이에요오</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-09-04">2025.09.04</time><b>노을나무</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">흔하지 않은 향이라서 너무 좋네요 ㅎㅎ 호불호 없는 향! 냄새도 오래 은은하게 지속돼요</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2024-12-31">2024.12.31</time><b>반짝숲</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">20대 초반~중반에 어울릴 것 같은 달달한 여성스러운 향. 흔하고 뻔한 향이 아니라 좋아요</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-03-22">2026.03.22</time><b>반짝꽃</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">롤리타 렘피카는 무거움에 덜컥 손은 안가도 그 지속력과 잔향에 한번 써보면 빠져버림</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-06-04">2025.06.04</time><b>구름향기</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">롤리타향은 달지만무거워서 20중반에서부터 쓰기 좋을거같아요 . 향이되게매력있고 이건 골드케이스라 진짜×100예뻐요... ♡</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-07-13">2026.07.13</time><b>포근한향기</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">롤리타렘피카 구매하고 싶었는데 한정판 겨우 구매했네요 듀통기한도 넉넉해서 너무 좋아요 항상 자주 구매합니다 감사합니다</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-08-26">2025.08.26</time><b>노을향기</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">향좋아요 잔향도 오래가고</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-08-15">2025.08.15</time><b>별빛나무</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">여자친구한테 선물할려고 샀는데 향이 너무 좋아서 저도 뿌리게 되네요 향이 너무 좋습니다 굳</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2024-07-01">2024.07.01</time><b>노을고양이</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">구하기 힘든 향수 여기서 저렴하게 잘 구매했네요. 최애 향수입니다.</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-09-25">2025.09.25</time><b>포근한바람</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">국내구매 어려워 여러향수 갈아타다<br>드뎌 만났네요<br>최애 향수 잘 쓰겠습니다 ·</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2025-09-21">2025.09.21</time><b>노을토끼</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">배송 진짜 빠르네요</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-01-14">2026.01.14</time><b>반짝고양이</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">은은하면서 흔하지않은 향이 몹시 마음에드네요</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-09-13">2026.09.13</time><b>구름바람</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">제 최애 향수.. 재고 보유해주셔서 너무 감사해요 ㅠ^ㅠ 단종 소식에 젤 큰거로 질렀네요.. 대체 향수 찾고 있는데 보내주신 샘플들 참고하겠습니다앙 !!</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-06-29">2026.06.29</time><b>노을바람</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">친구통해 우연히 시향하고 반했어요~<br>더이상 수입이 안된다고 해서 100ml로 샀는데 만족해요~<br>자기전에 뿌리고 자도 너무 좋아요~</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2026-02-01">2026.02.01</time><b>초록고양이</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">생소한 향이지만 자꾸 맡게 되는 향<br>제가 향에 민감한편인데 코를 찌르지도 않고 부드럽게 맡을 수 있는 향이에요</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    <article class="rcard imported-text-review">
+      <div class="review-meta"><time datetime="2024-10-10">2024.10.10</time><b>반짝산책</b><span class="review-example">예시 정보</span></div>
+      <p class="review-copy">작은 용량이 없어서 100ml 샀는데 데일리로 쓰기 넘 좋아요<br>남편도 향이 괜찮다고 하구ㅎㅎ 만족합니다</p>
+      <figure class="review-placeholder"><img src="assets/main-image-1.png" width="1254" height="1254" alt="후기 첨부 사진 대신 표시한 상품 가안 이미지" loading="lazy" decoding="async"><figcaption>가안 이미지 · 첨부 사진 없음</figcaption></figure>
+    </article>
+    </section>
+  </div>
 </section>
 
 <section class="in notice" id="notice">
@@ -281,7 +407,7 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
 <div class="modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-hidden="true">
   <div class="modal-box">
     <span class="badge">개인정보 미수집 · 즉시 파기</span>
-    <h2 id="privacy-title">개인정보 처리 안내</h2>
+    <h2 id="privacy-title">개인정보 처리 안내</h2><p>아래 즉시 파기 안내는 출시 알림 신청에 적용됩니다. 예시 후기 작성란의 내용과 사진은 이 브라우저에만 저장되며, 후기의 삭제 버튼으로 지울 수 있습니다.</p>
     <ol>
       <li><strong>입력하신 정보는 절대 저장하지 않습니다.</strong> 서버, 데이터베이스, 스프레드시트, 이메일, 외부 서비스 어디로도 전송되지 않습니다.</li>
       <li>입력값은 이 브라우저 화면에만 잠시 머물며, 완료 버튼을 누르는 <strong>즉시 화면에서 지워집니다.</strong> 쿠키나 브라우저 저장소에도 남기지 않습니다.</li>
@@ -294,6 +420,53 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
     </div>
   </div>
 </div><script src="assets/privacy.js"></script>
+<script>
+(function(){
+const form=document.getElementById('review-entry'),date=document.getElementById('review-date'),name=document.getElementById('review-name'),list=document.getElementById('review-local-list'),message=document.getElementById('review-message');
+const key='lolita-example-reviews-v1';
+let reviews=[];
+try{reviews=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(reviews))reviews=[]}catch(e){reviews=[]}
+function randomize(){
+const start=Date.UTC(2024,2,18),end=Date.UTC(2026,9,31);
+date.value=new Date(start+Math.floor(Math.random()*((end-start)/86400000+1))*86400000).toISOString().slice(0,10);
+const a=['달빛','구름','별빛','초록','노을','포근한','반짝'],b=['숲','꽃','고양이','토끼','산책','향기'];
+name.value=a[Math.floor(Math.random()*a.length)]+b[Math.floor(Math.random()*b.length)];
+}
+function render(){
+list.replaceChildren();
+reviews.forEach(function(r){
+const card=document.createElement('article');card.className='rcard';
+const meta=document.createElement('div');meta.className='review-meta';
+const time=document.createElement('time');time.dateTime=r.date;time.textContent=r.date.replaceAll('-','.');
+const nickname=document.createElement('b');nickname.textContent=r.name;
+const badge=document.createElement('span');badge.className='review-example';badge.textContent='예시 후기';
+meta.append(time,nickname,badge);
+if(r.buyer){const buyer=document.createElement('span');buyer.textContent='네이버페이 구매자 · 예시';meta.append(buyer)}
+const copy=document.createElement('p');copy.className='review-copy';copy.textContent=r.body;
+const image=document.createElement('img');image.className='review-photo';image.src=r.photo||'assets/main-image-1.png';image.alt=r.photo?'예시 후기 첨부사진':'첨부 사진 없음 · 상품 가안 이미지';image.loading='lazy';
+card.append(meta,copy,image);
+if(!r.photo){const caption=document.createElement('small');caption.textContent='가안 이미지 · 첨부 사진 없음';card.append(caption)}
+const remove=document.createElement('button');remove.type='button';remove.textContent='이 예시 삭제';remove.style.display='block';remove.style.marginTop='12px';remove.onclick=function(){const next=reviews.filter(x=>x!==r);try{localStorage.setItem(key,JSON.stringify(next));reviews=next;render()}catch(e){message.textContent='삭제하지 못했습니다.'}};card.append(remove);list.append(card);
+});
+}
+document.getElementById('review-random').onclick=randomize;
+form.onsubmit=async function(e){
+e.preventDefault();
+if(!name.value.trim()||!document.getElementById('review-body').value.trim()){message.textContent='닉네임과 후기글을 입력해주세요.';return}
+const file=document.getElementById('review-file').files[0];
+if(file&&(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>2*1024*1024)){message.textContent='사진은 2MB 이하의 JPG, PNG, WebP 파일을 선택해주세요.';return}
+const button=form.querySelector('[type=submit]');button.disabled=true;
+try{
+const photo=file?await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file)}):'';
+const next=[{date:date.value,name:name.value.trim(),body:document.getElementById('review-body').value.trim(),buyer:document.getElementById('review-buyer').checked,photo},...reviews];
+localStorage.setItem(key,JSON.stringify(next));reviews=next;render();form.reset();randomize();message.textContent='이 브라우저에 예시 후기를 저장했습니다.';
+}catch(e){message.textContent='저장하지 못했습니다. 브라우저 저장 공간 또는 사진 용량을 확인해주세요.'}
+finally{button.disabled=false}
+};
+randomize();render();
+})();
+</script>
 </body>
 </html>
+
 
