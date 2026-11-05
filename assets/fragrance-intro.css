@@ -4,7 +4,7 @@
 .scent-english{font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;font-weight:400;line-height:1.15;margin:0 0 16px}
 .scent-intro h2{font-size:48px;font-weight:600;line-height:1.4;letter-spacing:-.02em;margin:0 0 20px;word-break:keep-all}
 .scent-lead{font-size:28px;font-weight:400;line-height:1.7;margin:0;color:#6f6252}
-.scent-chapter{display:flex;flex-direction:column;align-items:center;gap:32px;margin-top:80px;text-align:center}
+.scent-chapter{display:flex;flex-direction:column;align-items:center;gap:22.4px;margin-top:80px;text-align:center}
 .scent-chapter-head{width:100%}
 .scent-note-line{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
 .scent-note-line .scent-label,.scent-note-line .scent-ingredients{margin:0}
@@ -27,7 +27,7 @@
 @media(max-width:600px){
  .scent-intro{padding:64px 24px 48px}.scent-intro-head{margin-bottom:40px}
  .scent-intro h2{font-size:24px}.scent-intro h3{font-size:20px}
- .scent-chapter{gap:28px;margin-top:56px}
+ .scent-chapter{gap:19.6px;margin-top:56px}
  .scent-art{height:270px;width:100%;max-width:340px;margin:auto}
  .scent-middle .scent-art,.scent-middle .scent-copy{order:initial}.scent-middle .scent-copy{padding-left:0}
  .scent-copy{min-width:0}.scent-description{font-size:16px}.scent-ingredients{font-size:18px;margin-bottom:16px}
