@@ -178,13 +178,17 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
 <style>
 .rcard .review-rating{display:flex;align-items:center;gap:6px;color:#d99b19;font-size:14px;letter-spacing:1px;margin:0 0 10px}
 .rcard .review-score{font-size:12px;letter-spacing:0;color:#767676}
+.reviews-show-all{display:block;width:100%;padding:16px 24px;margin:24px 0 0;border:1px solid #302b5d;background:transparent;color:#302b5d;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.reviews-show-all:hover{background:#302b5d;color:#fff}
+.reviews-show-all:focus-visible{outline:2px solid #302b5d;outline-offset:3px}
+#imported-text-reviews[hidden]{display:none}
 .review-toggle{border:0;background:none;color:#767676;font:inherit;padding:0 0 0 4px;cursor:pointer;white-space:nowrap}
 .review-toggle:hover{text-decoration:underline}
 .review-toggle:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
 .review-full[hidden],.review-summary [hidden]{display:none}
 .review-summary{white-space:pre-wrap}
 </style>
-<script src="assets/review-collapse.js" defer></script>
+<script src="assets/review-collapse.js?v=100chars-5reviews" defer></script>
 </head>
 <body>
 <div class="topbar"><div class="announcement-window"><div class="announcement-track"><span>출시 알림 신청 시 리미티드 에디션 소식을 가장 먼저 보내 드려요</span><span aria-hidden="true">출시 알림 신청 시 리미티드 에디션 소식을 가장 먼저 보내 드려요</span></div></div></div>
@@ -291,7 +295,7 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
       <p class="review-copy">아무튼 예전에는 이거 사러 백화점 갔었는데, 그냥 홈페이지에서 클릭으로 구매할 수 있어서 너무 좋아요!!! 빠른 배송 좋은 상품 감사합니다!!</p>
     </article>
     <!-- 텍스트 후기는 닉네임·날짜·본문 순서로 표시합니다. 예시 정보 표시, 가안 이미지, 사진 없음 안내를 생성하지 않습니다. 사진은 사용자가 첨부한 경우에만 추가합니다. -->
-    <section id="imported-text-reviews" aria-label="텍스트 시향 후기">
+    <section id="imported-text-reviews" aria-label="텍스트 시향 후기" hidden>
     <article class="rcard imported-text-review">
       <div class="review-meta"><b>감동적인하얀퀄팅</b><time datetime="2025-10-30">2025.10.30</time></div>
       <div class="review-rating" aria-label="별점 5점 만점에 5점"><span aria-hidden="true">★★★★★</span><span class="review-score" aria-hidden="true">5</span></div>
@@ -408,6 +412,7 @@ src="https://www.facebook.com/tr?id=1862203258286674&ev=PageView&noscript=1"
       <p class="review-copy">작은 용량이 없어서 100ml 샀는데 데일리로 쓰기 넘 좋아요<br>남편도 향이 괜찮다고 하구ㅎㅎ 만족합니다</p>
     </article>
     </section>
+    <button type="button" id="reviews-show-all" class="reviews-show-all" aria-expanded="false" aria-controls="imported-text-reviews">후기 전체보기</button>
   </div>
 </section>
 

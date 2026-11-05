@@ -1,4 +1,14 @@
 (function () {
+  const remainingReviews = document.getElementById('imported-text-reviews');
+  const showAll = document.getElementById('reviews-show-all');
+  if (remainingReviews && showAll) {
+    showAll.addEventListener('click', function () {
+      const expanded = showAll.getAttribute('aria-expanded') !== 'true';
+      remainingReviews.hidden = !expanded;
+      showAll.setAttribute('aria-expanded', String(expanded));
+      showAll.textContent = expanded ? '후기 접기' : '후기 전체보기';
+    });
+  }
   const segmenter = typeof Intl.Segmenter === 'function'
     ? new Intl.Segmenter('ko', { granularity: 'grapheme' }) : null;
   document.querySelectorAll('#reviews .rcard').forEach(function (card, index) {
@@ -11,7 +21,7 @@
     }).join('\n\n');
     const characters = segmenter
       ? Array.from(segmenter.segment(text), part => part.segment) : Array.from(text);
-    if (characters.length <= 30) return;
+    if (characters.length <= 100) return;
 
     const full = document.createElement('div');
     full.className = 'review-full';
@@ -23,7 +33,7 @@
     const summary = document.createElement('p');
     summary.className = 'review-copy review-summary';
     const preview = document.createElement('span');
-    preview.textContent = characters.slice(0, 30).join('');
+    preview.textContent = characters.slice(0, 100).join('');
     const toggle = document.createElement('button');
     toggle.type = 'button';
     toggle.className = 'review-toggle';
