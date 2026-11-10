@@ -20,7 +20,6 @@
 .scent-img-musk{width:66%;right:0;top:0;opacity:.9}
 .scent-label{font-size:12px;font-weight:500;line-height:1.5;letter-spacing:.08em;color:#78644d;margin:0 0 12px}
 .scent-intro h3{font-size:24px;font-weight:600;line-height:1.4;letter-spacing:-.02em;margin:0 0 12px;word-break:keep-all}
-.scent-intro #scent-top-title{display:inline-block;font-size:15px;padding:10px 20px;border:1px solid #78644d;border-radius:12px;background:transparent;color:#78644d}
 .scent-ingredients{font-size:22px;font-weight:500;line-height:1.7;margin:0 0 20px;color:#78644d;word-break:keep-all}
 .scent-description{font-size:28px;font-weight:400;line-height:1.7;margin:0;color:#51483d;word-break:keep-all}
 @media(max-width:860px){.scent-ingredients{font-size:22px}.scent-description{font-size:20px}}
