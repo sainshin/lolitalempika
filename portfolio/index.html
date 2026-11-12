@@ -1,330 +1,334 @@
 <!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>롤리타렘피카 (골든 애플 캠페인)</title>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>신사인 포트폴리오</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root { color-scheme: light; color: #292416; background: #f5f1e6; font-family: system-ui, sans-serif; line-height: 1.65; }
-* { box-sizing: border-box; }
-main { max-width: 70rem; margin: auto; padding: clamp(1rem, 4vw, 3rem); }
-section { background: #fffdf7; border: 1px solid #ded4bb; border-radius: .75rem; margin-bottom: 1.5rem; padding: clamp(1rem, 4vw, 2.5rem); }
-header { display: flex; align-items: baseline; gap: .75rem; border-bottom: 1px solid #ded4bb; padding-bottom: .8rem; }
-h1, h2 { margin: 0; line-height: 1.35; font-size: clamp(1.25rem, 3vw, 1.9rem); }
-.no, .ft { color: #6d521a; font-variant-numeric: tabular-nums; }
-.no, dt { font-weight: 700; }
-dl { margin: .75rem 0; }
-.row { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: .75rem; border-bottom: 1px solid #eee7d6; padding: .55rem 0; }
-.indent-1 { margin-inline-start: 1rem; }
-.indent-2 { margin-inline-start: 2rem; }
-dd { margin: 0; overflow-wrap: anywhere; }
-a { color: #71520b; }
-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
-th, td { text-align: left; vertical-align: top; padding: .55rem; border: 1px solid #ded4bb; overflow-wrap: anywhere; }
-table th:first-child { width: 18%; }
-table td:last-child, table th:last-child { width: 34%; }
-.b, .tag { border-radius: .3rem; padding: .06em .36em; background: #f0e6cb; }
-.b { display: inline-block; margin: .12rem .12rem .12rem 0; }
-.skill, .real { background: #e0ebdc; }
-.none { background: #eeebe4; }
-.shot { min-height: 1.65em; }
-.shot img { display: block; max-width: 100%; height: auto; }
-.ft { text-align: right; }
-@media (max-width: 42rem) {
-  .row { grid-template-columns: minmax(0, 1fr); gap: .2rem; }
-  dt:empty { display: none; }
+:root{--ink:#1d2124;--muted:#7b8389;--line:#d9dee2;--paper:#fff;--bg:#eceff1;
+--c:#b4532a;--c-bg:#fbeee7;--p:#1f5fa8;--p-bg:#e7f0fa;--g:#2f7d4f;--g-bg:#e6f4ec;
+--real:#1f6f43;--real-bg:#e3f3e9;--assume:#8a5a00;--assume-bg:#fbf0d9;--none:#6d7377;--none-bg:#eceeed}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15181a}}
+:root[data-theme="dark"]{--bg:#15181a}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;font-size:9.5pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@page{size:A4 landscape;margin:0}
+.page{width:297mm;height:210mm;margin:12px auto;background:var(--paper);padding:11mm 13mm 9mm;display:flex;flex-direction:column;gap:6px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+@media print{body{background:#fff}.page{margin:0;box-shadow:none;break-after:page}}
+@media screen and (max-width:900px){.page{width:auto;height:auto;margin:8px 0;padding:20px 16px}.row3,.row2,.top2{grid-template-columns:1fr !important}}
+.hd{display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.no{font-weight:900;font-size:20pt;line-height:1}
+.ax{font-size:8pt;font-weight:700;border-radius:3px;padding:1px 7px;white-space:nowrap}
+.ax.c{color:var(--c);background:var(--c-bg)}.ax.p{color:var(--p);background:var(--p-bg)}.ax.g{color:var(--g);background:var(--g-bg)}
+.ttl{font-size:14pt;font-weight:700;flex:1}
+.period{font-size:9pt;white-space:nowrap}
+.badges{display:flex;flex-wrap:wrap;gap:4px;font-size:7.5pt}
+.b{border:1px solid var(--ink);border-radius:10px;padding:0 7px;white-space:nowrap}
+.b.skill{background:var(--ink);color:#fff}
+.box{border:1px solid var(--line);border-radius:5px;padding:5px 8px;display:flex;flex-direction:column}
+.box>b{font-size:8pt;margin-bottom:2px}
+.box>div{flex:1}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.row2{display:grid;grid-template-columns:1.25fr 1fr;gap:6px}
+.top2{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.s1{height:40mm}.s2{height:56mm}.s3{height:42mm}.s4{height:66mm}.s5{height:52mm}
+.tall td{height:11mm}
+table{width:100%;border-collapse:collapse;font-size:8pt}
+th,td{border:1px solid var(--line);padding:2px 6px;text-align:left;height:5.4mm}
+th{background:#f5f6f7;font-weight:500}
+.shot{border:1px dashed var(--line);border-radius:5px;flex:1;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:contain}
+.tag{font-size:7pt;font-weight:700;border-radius:3px;padding:0 4px}
+.tag.real{color:var(--real);background:var(--real-bg)}.tag.assume{color:var(--assume);background:var(--assume-bg)}.tag.none{color:var(--none);background:var(--none-bg)}
+.ft{margin-top:auto;display:flex;justify-content:space-between;font-size:7pt;color:var(--muted);border-top:1px solid var(--line);padding-top:3px}
+
+/* Populated slides can grow so text and evidence stay visible. */
+.page { height: auto; min-height: 210mm; overflow: visible; }
+.page .s1, .page .s2, .page .s3, .page .s4, .page .s5 { height: auto; }
+.page .box { min-width: 0; }
+.page td, .page .detail, .page .b { overflow-wrap: anywhere; }
+.page .b { white-space: normal; }
+.page .tall td { height: auto; }
+.detail + .detail { margin-top: .2em; }
+.notes { font-size: 8pt; }
+.media { display: flex; align-items: flex-start; justify-content: center; gap: 6px; min-height: 10mm; }
+.media > * { flex: 1 1 0; min-width: 0; max-width: 100%; }
+.media img, .media video { width: 100%; height: auto; max-height: 53mm; object-fit: contain; }
+.media.cover img { max-height: 75mm; }
+@media screen and (max-width: 900px) { .page { min-height: 0; } }
+@media screen and (max-width: 540px) { .media { flex-direction: column; } .media > * { flex: auto; } .media img, .media video { max-height: none; } }
+.media .print-poster { display: none; }
+@media print {
+  .page { min-height: 0; padding: 6mm 10mm; gap: 5px; font-size: 8.5pt; line-height: 1.35; }
+  .page .notes { font-size: 7pt; line-height: 1.25; }
+  .media.cover img { max-height: 60mm; }
+  .media video { display: none; }
+  .media .print-poster { display: block; }
+  .page .row2, .page .row3, .page .top2, .page tr, .page .detail { break-inside: avoid; }
+  .page:last-of-type { break-after: auto; }
 }
-</style>
-</head>
-<body>
-<main>
-<section id="section-00" aria-labelledby="title-00">
-<header><span class="no">00</span><h1 id="title-00">공통 — 브랜드와 전체 목표</h1></header>
-<div class="shot" style="margin-top: 1rem"><img src="cover.png" alt="롤리타렘피카 향수 디지털 광고 캠페인 표지" width="1600" height="900"></div>
-<dl>
-<div class="row"><dt>이름</dt><dd>신사인</dd></div>
-<div class="row"><dt>브랜드명</dt><dd>롤리타렘피카 (골든 애플 캠페인)</dd></div>
-<div class="row"><dt>기간</dt><dd>2026.09 ~ 2026.12</dd></div>
-<div class="row"><dt>브랜드 (무엇을, 누구에게, 실사업/가상)</dt><dd>골든 애플 여성향수 100ml (예정가 208,000원)을 국내 20~30대 여성에게 소개. 단종된 제품에 그리스로마신화 황금사과 스토리텔링을 입힌 가상 프로젝트 (실제 판매·결제 없음, 신화 연결은 창작 콘셉트)</dd></div>
-<div class="row"><dt>상황 분석 (시작할 때 상태)</dt><dd>단종 제품이라 실구매 경로가 없고, 브랜드 인지도·사이트 방문 데이터가 없는 상태에서 시작. 고려 단계(시향 전 망설임, 감정 곡선 -2)가 승부 지점. 사이트는 2026.10.29부터 GA4 측정 시작.</dd></div>
-<div class="row"><dt>북극성 지표 / 시작 / 목표 / 결과 / 출처</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>북극성</dt><dd>출시 알림 버튼 클릭 수</dd></div>
-<div class="row indent-1"><dt>시작</dt><dd>출시 알림 버튼 클릭 수 [ ] (광고 전, 버튼 단위 클릭 수는 GA4에서 아직 분리 확인 못 함) / 방문자 76명 (<span class="tag real">실측</span>) / 평균 참여 시간 54초 (<span class="tag real">실측</span>)</dd></div>
-<div class="row indent-1"><dt>목표 (가안, <span class="tag assume">가정</span>)</dt><dd>광고 1주·5만 원 시뮬레이션 기준 출시 알림 버튼 클릭 약 4건 (CTR 2%, 클릭 후 버튼 클릭률 4%, CPM 10,000원 <span class="tag assume">가정</span>) / 방문자 [ ] / 평균 참여 시간 [ ]</dd></div>
-<div class="row indent-1"><dt>결과</dt><dd>[ ] (광고 집행 전)</dd></div>
-<div class="row indent-1"><dt>출처</dt><dd>GA4 속성 lolitalempika, 지난 28일(2026.10.15~11.11), 2026.11.12 조회. 가안 목표는 DAY37 예산분배 시트 가정값 기준</dd></div>
-</dl><table><thead><tr><th scope="col">축</th><th scope="col">목표 / 핵심 지표</th><th scope="col">장표</th></tr></thead><tbody><tr><th scope="row">콘텐츠</th><td>목표 [ ] / 핵심 지표 최대 조회수·좋아요·댓글·공유 (릴스 8초·15초)</td><td>02~05 (기획은 01)</td></tr><tr><th scope="row">퍼포먼스</th><td>목표 릴스 2개 Meta 광고, 예산 5만 원 이내, 1주 측정 (<span class="tag assume">가정</span>) / 핵심 지표 CTR·CPC·출시 알림 버튼 클릭 수·CPA (ROAS 미사용)</td><td>06~07 (06 측정 구조·지표 설계 + Meta 광고 집행, 07 소재 비교) / 결과 [ ] (미집행)</td></tr><tr><th scope="row">그로스</th><td>목표 [ ] / 출시 알림 버튼 클릭 = 구매 전환으로 가정 (<span class="tag assume">가정</span>) / 핵심 지표 퍼널 전환율·세션·참여율 (세션 114, 참여율 32.46% <span class="tag real">실측</span>)</td><td>08~09</td></tr></tbody></table><dl>
-<div class="row"><dt>내 사이트 주소 / 만든 방법 / 측정 연결 / 테스트한 것</dt><dd><a href="https://sainshin.github.io/lolitalempika/">https://sainshin.github.io/lolitalempika/</a> / GitHub Pages (sainshin/lolitalempika) / GA4 data-ga 속성 + Looker Studio 보고서 &quot;롤리타렘피카_261106_신사인&quot; / 2026.10.29 ?ga_debug=1 테스트 (<span class="tag real">실측</span>, 사이트 패널 기준), DebugView [ ], 광고 집행·A/B 하지 않음</dd></div>
-</dl>
-<footer class="ft"><span>00</span></footer>
-</section>
-<section id="section-01" aria-labelledby="title-01">
-<header><span class="no">01</span><h2 id="title-01">기획 — 브랜드 기획·카피</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>그리스로마신화 황금사과 스토리로 향수 컨셉을 재해석한 브랜드 기획</dd></div>
-<div class="row"><dt>한 줄 맥락</dt><dd>롤리타렘피카 향수를 구매하고 싶어하는 가상의 페르소나 서하윤에게 '소장하고 싶은 황금사과'로 소개하는 가상 프로젝트</dd></div>
-<div class="row"><dt>기간</dt><dd>[ ]</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">Notion</span> <span class="b">카피 머신 사이트(<a href="https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/</a>)</span> 사용한 AI 도구명 <span class="b">ChatGPT</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">브랜드 전략</span> <span class="b skill">페르소나·고객 여정 설계</span> <span class="b skill">포지셔닝·USP</span> <span class="b skill">카피라이팅</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>고려 단계 감정 점수 / 시작 -2 (고객 여정 5단계 중 최저, <span class="tag assume">가정</span>: 자체 설정 점수) / 목표 [ ] / 결과 [ ] (<span class="tag none">미측정</span>) / 출처 노션 DAY8 고객 여정 (<a href="https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51">https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51</a>)</dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>카피 5문 점검 / 시작 태그라인 N 판정 / 목표 점검 통과 / 결과 [ ] / 출처 노션 DAY11 브랜드 가이드라인 (<a href="https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f">https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f</a>)</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>단종 제품이라 실구매 경로가 없고 가상 스토리텔링으로만 소개 가능. 향 선택은 시향 없이 망설이는 고려 단계에서 막힘(감정 -2).</dd></div>
-<div class="row"><dt>브랜드·제품</dt><dd>롤리타렘피카 골든 애플 100ml, 예정가 208,000원</dd></div>
-<div class="row"><dt>타깃·페르소나</dt><dd>서하윤, 33세, 패션 플랫폼 브랜드 디자이너 8년 차, 성수동 (노션 DAY7: <a href="https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a">https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a</a>)</dd></div>
-<div class="row"><dt>고객 여정(5단계 감정)</dt><dd>인지 호기심 +2 / 고려 불안 -2 / 구매 안도 +1 / 사용 만족 +3 / 충성 애착 +2 (노션 DAY8, 승부 지점 = 고려 단계)</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>고려 단계의 불안(-2)을 줄이고, 단종 향수를 '소장하고 싶은 오브제'로 보이게 하는 메시지 정립</dd></div>
-<div class="row"><dt>가설</dt><dd>시향 전 망설임은 향 설명보다 '소장 가치를 설명하는 스토리'로 줄일 수 있다. 희소성을 단정하지 않고 신화 콘셉트로 차별화한다.</dd></div>
-<div class="row"><dt>실행</dt><dd>4개 모듈로 압축</dd></div>
-<div class="row indent-1"><dt>① Who</dt><dd>서하윤 페르소나</dd></div>
-<div class="row indent-1"><dt>② Stuck</dt><dd>고객 여정 감정 곡선, 고려 단계 -2</dd></div>
-<div class="row indent-1"><dt>③ Win</dt><dd>포지셔닝 빈자리(X축 희소성·소장 오브제 / Y축 향 지속성, 경쟁 브랜드: 본투스탠드아웃·논픽션·페사드·탬버린즈·SW19) + USP (노션 DAY9: <a href="https://app.notion.com/p/42007e401b63834295f28149775f9fc0">https://app.notion.com/p/42007e401b63834295f28149775f9fc0</a>)</dd></div>
-<div class="row indent-1"><dt>④ Say</dt><dd>카피 개선(의도 → 초안 → 고친 이유 → 완성)</dd></div>
-<div class="row indent-2"><dt>의도</dt><dd>단종 제품을 소장하고 싶은 황금사과로 소개</dd></div>
-<div class="row indent-2"><dt>초안</dt><dd>100개 한정수량, 그리스로마신화 여신도 탐낸 향수</dd></div>
-<div class="row indent-2"><dt>고친 이유</dt><dd>5문 점검 결과 태그라인 N 판정 / 금지 표현('여신') 제외 / 희소성·지속 시간 단정 금지</dd></div>
-<div class="row indent-2"><dt>완성</dt><dd>&quot;아프로디테도 탐낸 그 향수&quot;, &quot;그리스로마신화 황금사과를 향수로 담다&quot;</dd></div>
-<div class="row indent-2"><dt>카피 원칙</dt><dd>신화는 창작 콘셉트로 표기, 희소성(재고·한정) 단정 금지, 지속 시간 보장 금지</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot"></dd></div>
-<div class="row"><dt>결과</dt><dd>기획 4개 모듈 정리 완료. 성과 수치는 광고·사이트 데이터가 쌓인 뒤 08~09장에서 확인 (현재 [ ], <span class="tag none">미측정</span>).</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>02~05 콘텐츠 장으로 연결: 서하윤 고려 단계 불안을 릴스·상세페이지에서 해소</dd></div>
-<div class="row"><dt>노션 출처</dt><dd>DAY7 페르소나(<a href="https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a">https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a</a>) / DAY8 CDJ(<a href="https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51">https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51</a>) / DAY9 포지셔닝·USP(<a href="https://app.notion.com/p/42007e401b63834295f28149775f9fc0">https://app.notion.com/p/42007e401b63834295f28149775f9fc0</a>) / DAY10 메시지 하우스(<a href="https://app.notion.com/p/55107e401b638353b2e501939f4d94be">https://app.notion.com/p/55107e401b638353b2e501939f4d94be</a>) / DAY11 브랜드 가이드라인(<a href="https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f">https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f</a>) / DAY13 고객 여정별 콘텐츠 전략(<a href="https://app.notion.com/p/b9107e401b638323816701bda25d2b65">https://app.notion.com/p/b9107e401b638323816701bda25d2b65</a>) / DAY14 카피(<a href="https://app.notion.com/p/e8107e401b6382feb46c815e61df558f">https://app.notion.com/p/e8107e401b6382feb46c815e61df558f</a>)</dd></div>
-<div class="row"><dt>배운 점 </dt><dd>카피는 범용 타깃보다 이 제품을 살 만한 구체적인 페르소나를 떠올릴 때 선명해지고, 그러려면 제품 컨셉과 페르소나를 먼저 구체화해야한다</dd></div>
-</dl>
-<footer class="ft"><span>01</span></footer>
-</section>
-<section id="section-02" aria-labelledby="title-02">
-<header><span class="no">02</span><h2 id="title-02">콘텐츠 — 캐릭터 시트·소품·로고</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>세계관 캐릭터 시트·소품·로고 제작</dd></div>
-<div class="row"><dt>기간</dt><dd>[ ]</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">ChatGPT</span> <span class="b">Midjourney</span> <span class="b">Higgsfield</span> <span class="b">Dreamina</span> <span class="b">Figma</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">브랜드 비주얼</span> <span class="b skill">콘텐츠 기획</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>제작물 수 (캐릭터 표정시트 9장 · 소품 1개 · 패키지 1개 · 로고 10종, 합계 21개) / 시작 0 / 목표 [ ] / 결과 표정시트 9장·소품 1개·패키지 1개·로고 10종 (<span class="tag real">실측</span>, 본인 집계) / 출처 노션 DAY16~18</dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>[ ]</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>국내 전용 공식 SNS가 없어 국내 접점이 없고, 단종 제품이라 제품 이미지만으로는 이야기를 전달하기 어려움. 콘셉트를 밤에서 신화·금빛 황금사과로 변경하면서 비주얼도 다시 정리함.</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>기획 01의 서하윤·황금사과 메시지를 릴스·상세페이지에서 같은 얼굴로 보이게 만드는 캐릭터·소품·패키지·로고 체계 만들기</dd></div>
-<div class="row"><dt>가설</dt><dd>[ ]</dd></div>
-<div class="row"><dt>실행</dt><dd>ChatGPT · Midjourney · Higgsfield · Dreamina · Figma로 캐릭터 표정시트 9장, 소품 1개, 패키지 1개, 로고 10종 제작. 컬러 팔레트 #C99843 · #F1E3D1 · #D9B9AE · #551A2A · #9D88B8 (11/4 브리프 기준)</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1rem">
-<img src="reels-packaging.png" alt="롤리타렘피카 향수 패키지" width="1024" height="1536">
-<img src="reels-model.png" alt="모델과 롤리타렘피카 골든 애플 향수" width="1254" height="1254">
-</dd></div>
-<div class="row"><dt>결과</dt><dd>캐릭터 표정시트 9장·소품 1개·패키지 1개·로고 10종 제작 (<span class="tag real">실측</span>, 본인 집계)</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>04 릴스, 05 상세페이지에 같은 캐릭터·소품·로고 적용</dd></div>
-<div class="row"><dt>노션 출처</dt><dd>DAY16 무드보드 &amp; 누끼컷 제작 가이드(<a href="https://app.notion.com/p/f4107e401b6382da8c250121846e3c04">https://app.notion.com/p/f4107e401b6382da8c250121846e3c04</a>) / DAY17 AI 모델 &amp; 피드·메타 광고 이미지 제작 가이드(<a href="https://app.notion.com/p/aa407e401b63838db53e01b8393a7448">https://app.notion.com/p/aa407e401b63838db53e01b8393a7448</a>) / DAY18 광고 평가표 &amp; 카드뉴스 제작 가이드(<a href="https://app.notion.com/p/b1c07e401b6382508991818baba9c872">https://app.notion.com/p/b1c07e401b6382508991818baba9c872</a>)</dd></div>
-<div class="row"><dt>배운점 </dt><dd>AI 툴별 강점을 알고 역할을 나누면 품질과 비용을 함께 잡을 수 있다. (ChatGPT 합성, Midjourney 무드, Higgsfield 일관성, Dreamina 부분 수정)</dd></div>
-</dl>
-<footer class="ft"><span>02</span></footer>
-</section>
-<section id="section-03" aria-labelledby="title-03">
-<header><span class="no">03</span><h2 id="title-03">콘텐츠 — 이미지광고·카드뉴스</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>세계관을 담은 인스타 피드·메타 광고 이미지·카드뉴스 제작</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">ChatGPT(Work 모드)</span> <span class="b">Higgsfield(Nano Banana Pro)</span> <span class="b">Figma</span> <span class="b">Instagram</span> <span class="b">카드뉴스 기획 머신 사이트(<a href="https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/</a>)</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">콘텐츠 기획</span> <span class="b skill">광고 소재 기획</span> <span class="b skill">카드뉴스 제작</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>제작물 수 (인스타 피드 9장 · 메타 이미지 광고 소재 3종 · 카드뉴스 기획 3세트 · 카드뉴스 1개 [ ]장) / 시작 0 / 목표 [ ] / 결과 [ ] (본인 집계 필요) / 출처 노션 DAY17~18</dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>피드·카드뉴스 게시물 반응 (도달·저장·공유) / 시작 0 / 목표 [ ] / 결과 [ ] (<span class="tag none">미측정</span>, 집계 기간 표기 필요) / 출처 인스타그램 인사이트</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>국내에서 잘 알려지지 않은 브랜드라 제품 소개가 먼저 필요함. 레퍼런스 광고(카드뉴스 4개·릴스 5개)를 5축(브랜드·고객·카피·비주얼·행동)으로 평가해 보니, 향수 광고는 비주얼이 강하고 브랜드·행동이 약한 경우가 많았음.</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>메타 광고 소재 3종의 소구점을 서로 다르게 나눠 메시지가 겹치지 않게 하고, 카드뉴스로 낯선 브랜드의 제품을 먼저 소개하기</dd></div>
-<div class="row"><dt>가설</dt><dd>[ ]</dd></div>
-<div class="row"><dt>실행</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>① 레퍼런스 분석</dt><dd>카드뉴스·릴스 광고를 5축으로 평가해 강한 축·약한 축과 내 브랜드 적용점 정리 (예: 향 구성을 고급 오브제로 시각화, 3분할로 여신별 향수 소개)</dd></div>
-<div class="row indent-1"><dt>② AI 모델·요소 준비</dt><dd>AI 모델(아프로디테·아테나·헤라) 원본과 레퍼런스 세트(프로필·표정·얼굴·신체 시트)를 만들고, Higgsfield에 제품·캐릭터 요소 등록</dd></div>
-<div class="row indent-1"><dt>③ 인스타 피드 9장</dt><dd>3×3 그리드에서 가로 한 줄을 톤 하나로 구성(톤 3안 × 3장), 브랜드 계정(@lolitalempika.mag)에 게시</dd></div>
-<div class="row indent-1"><dt>④ 메타 이미지 광고 3종</dt><dd>소재별 소구점 분리 (1 금빛 사과 보틀의 소장 가치 / 2 리미티드 에디션의 희소성 / 3 향의 개성). 이미지는 글자 없이 빈 영역을 남겨 생성하고, 피그마에서 헤드라인·보조 문구·CTA 3줄을 얹음</dd></div>
-<div class="row indent-1"><dt>⑤ 카드뉴스</dt><dd>목적 후보(제품 소개형·이벤트·혜택형·후기·사례형·비교형) 중 제품 소개형 선택 (이유: 잘 모르는 브랜드라 제품 소개가 우선) → 카드뉴스 기획 머신 사이트 제작 → 피그마 템플릿 생성·내용 입력 → 직접 손질 후 내보내기</dd></div>
-<div class="row"><dt>결과</dt><dd>[ ]</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>[ ]</dd></div>
-<div class="row"><dt>메모</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt></dt><dd>메타 광고 소재 보조 문구에 &quot;국내 단 100개&quot;, &quot;5~8시간&quot;이 남아 있음. 01장 카피 원칙(희소성·지속 시간 단정 금지)과 충돌하므로 수정 필요.</dd></div>
-<div class="row indent-1"><dt></dt><dd>노션 DAY17·18 내용은 2026.10.10 기준이라, 컨셉 변경(밤 → 신화·금빛 황금사과) 이후의 최신 결과물과 다를 수 있음. 최종 결과물 기준으로 확인 필요.</dd></div>
-<div class="row indent-1"><dt></dt><dd>02장(캐릭터 표정시트)과 ②(AI 모델 레퍼런스 세트)가 겹칠 수 있음. 어느 장에 둘지 정리 필요.</dd></div>
-<div class="row"><dt>노션 출처</dt><dd>DAY17 AI 모델 &amp; 피드·메타 광고 이미지 제작 가이드(<a href="https://app.notion.com/p/aa407e401b63838db53e01b8393a7448">https://app.notion.com/p/aa407e401b63838db53e01b8393a7448</a>) / DAY18 광고 평가표 &amp; 카드뉴스 제작 가이드(<a href="https://app.notion.com/p/b1c07e401b6382508991818baba9c872">https://app.notion.com/p/b1c07e401b6382508991818baba9c872</a>)</dd></div>
-<div class="row"><dt>배운 점</dt><dd>[ ]</dd></div>
-</dl>
-<div class="shot" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; margin-block: 1rem">
-<img src="image-ad.png" alt="롤리타렘피카 이미지 광고" width="1080" height="1080">
-<img src="card-news.png" alt="롤리타렘피카 카드뉴스 표지" width="1080" height="1080">
+</style></head><body>
+<section class="page" id="section-00" aria-labelledby="title-00">
+<div class="hd"><span class="no">00</span><span class="ttl" id="title-00" role="heading" aria-level="1">롤리타렘피카 (골든 애플 캠페인)</span><span class="period">2026.09 ~ 2026.12</span></div>
+<div class="shot media cover"><img src="cover.png" alt="롤리타렘피카 향수 디지털 광고 캠페인 표지" width="1600" height="900"></div>
+<div class="top2">
+ <div class="box s4"><b>브랜드</b><div>골든 애플 여성향수 100ml (예정가 208,000원)을 국내 20~30대 여성에게 소개. 단종된 제품에 그리스로마신화 황금사과 스토리텔링을 입힌 가상 프로젝트 (실제 판매·결제 없음, 신화 연결은 창작 콘셉트)</div></div>
+ <div class="box s4"><b>상황 분석</b><div>단종 제품이라 실구매 경로가 없고, 브랜드 인지도·사이트 방문 데이터가 없는 상태에서 시작. 고려 단계(시향 전 망설임, 감정 곡선 -2)가 승부 지점. 사이트는 2026.10.29부터 GA4 측정 시작.</div></div>
 </div>
-<footer class="ft"><span>03</span></footer>
-</section>
-<section id="section-04" aria-labelledby="title-04">
-<header><span class="no">04</span><h2 id="title-04">콘텐츠 — 인스타 릴스 8초·15초 성과</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>단종 향수 세계관 릴스(8초·15초)로 인지 만들기</dd></div>
-<div class="row"><dt>기간</dt><dd>[ ]</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">Instagram</span> <span class="b">Notion</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">콘텐츠 기획</span> <span class="b skill">숏폼 제작</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>릴스 조회수 / 시작 0 (게시 전) / 목표 [ ] / 결과 [ ] (<span class="tag none">미측정</span>) / 출처 인스타그램 인사이트</dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>좋아요·댓글·공유 / 시작 0 / 목표 [ ] / 결과 [ ] (<span class="tag none">미측정</span>) / 출처 인스타그램 인사이트</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>국내 인지도 접점이 올리브영·롯데ON·글로우픽 노출뿐. 인스타 계정(@lolitalempika.mag)은 운영 중. 릴스는 콘셉트 변경(밤 → 신화·금빛 황금사과)으로 다시 제작 중.</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>8초(짧고 강한 후킹)와 15초(스토리 전달)로 인지 → 프로필 방문 → 사이트 유입 흐름 만들기</dd></div>
-<div class="row"><dt>가설</dt><dd>단종 향수 한 제품을 중심으로 세계관 릴스를 올리면 인지에서 사이트 유입까지 이어질 것이다.</dd></div>
-<div class="row"><dt>실행</dt><dd>릴스 8초·15초 제작 (노션 DAY19 숏폼 기획안 → DAY20 8초 장면표·15초 스토리보드 → DAY21 8초 릴스 프롬프트 → DAY22 15초 장면별 영상 소스)</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1rem">
-<img src="reel-dress.png" alt="바람에 흩날리는 그리스 여신 드레스" width="941" height="1672">
-<div>
-<video id="reel-video" src="reel-8s.mp4" poster="reel-first-frame.png" preload="none" muted playsinline controls aria-label="롤리타렘피카 8초 릴스" style="display: block; width: 100%; aspect-ratio: 9 / 16; background: #292416"></video>
+<table><tr><th style="width:26%">전체 목표 (북극성 지표)</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>출시 알림 버튼 클릭 수</td><td>출시 알림 버튼 클릭 수 [ ] (광고 전, 버튼 단위 클릭 수는 GA4에서 아직 분리 확인 못 함) / 방문자 76명 (<span class="tag real">실측</span>) / 평균 참여 시간 54초 (<span class="tag real">실측</span>)</td><td>광고 1주·5만 원 시뮬레이션 기준 출시 알림 버튼 클릭 약 4건 (CTR 2%, 클릭 후 버튼 클릭률 4%, CPM 10,000원 <span class="tag assume">가정</span>) / 방문자 [ ] / 평균 참여 시간 [ ]</td><td>[ ] (광고 집행 전)</td><td>GA4 속성 lolitalempika, 지난 28일(2026.10.15~11.11), 2026.11.12 조회. 가안 목표는 DAY37 예산분배 시트 가정값 기준</td></tr></table>
+<table class="tall"><tr><th style="width:14%">축</th><th>목표</th><th style="width:26%">핵심 지표</th><th style="width:14%">장표</th></tr>
+<tr><td><span class="ax c">콘텐츠</span></td><td>[ ]</td><td>최대 조회수·좋아요·댓글·공유 (릴스 8초·15초)</td><td>02~05 (기획은 01)</td></tr>
+<tr><td><span class="ax p">퍼포먼스</span></td><td>릴스 2개 Meta 광고, 예산 5만 원 이내, 1주 측정 (<span class="tag assume">가정</span>)</td><td>CTR·CPC·출시 알림 버튼 클릭 수·CPA (ROAS 미사용)</td><td>06~07 (06 측정 구조·지표 설계 + Meta 광고 집행, 07 소재 비교) / 결과 [ ] (미집행)</td></tr>
+<tr><td><span class="ax g">그로스</span></td><td>[ ] / 출시 알림 버튼 클릭 = 구매 전환으로 가정 (<span class="tag assume">가정</span>)</td><td>퍼널 전환율·세션·참여율 (세션 114, 참여율 32.46% <span class="tag real">실측</span>)</td><td>08~09</td></tr></table>
+<table class="tall"><tr><th style="width:26%">내 사이트</th><th>만든 방법</th><th>측정 연결</th><th>테스트한 것</th></tr><tr><td><a href="https://sainshin.github.io/lolitalempika/">https://sainshin.github.io/lolitalempika/</a></td><td>GitHub Pages (sainshin/lolitalempika)</td><td>GA4 data-ga 속성 + Looker Studio 보고서 &quot;롤리타렘피카_261106_신사인&quot;</td><td>2026.10.29 ?ga_debug=1 테스트 (<span class="tag real">실측</span>, 사이트 패널 기준), DebugView [ ], 광고 집행·A/B 하지 않음</td></tr></table>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>00</span></div></section>
+<section class="page" id="section-01" aria-labelledby="title-01">
+<div class="hd"><span class="no">01</span><span class="ax c">콘텐츠</span><span class="ttl" id="title-01" role="heading" aria-level="2">그리스로마신화 황금사과 스토리로 향수 컨셉을 재해석한 브랜드 기획</span><span class="period">[ ]</span></div>
+<div class="badges"><span class="b">Notion</span> <span class="b">카피 머신 사이트(<a href="https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/</a>)</span> 사용한 AI 도구명 <span class="b">ChatGPT</span> <span class="b skill">브랜드 전략</span> <span class="b skill">페르소나·고객 여정 설계</span> <span class="b skill">포지셔닝·USP</span> <span class="b skill">카피라이팅</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>고려 단계 감정 점수</td><td>-2 (고객 여정 5단계 중 최저, <span class="tag assume">가정</span>: 자체 설정 점수)</td><td>[ ]</td><td>[ ] (<span class="tag none">미측정</span>)</td><td>노션 DAY8 고객 여정 (<a href="https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51">https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51</a>)</td></tr><tr><td>카피 5문 점검</td><td>태그라인 N 판정</td><td>점검 통과</td><td>[ ]</td><td>노션 DAY11 브랜드 가이드라인 (<a href="https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f">https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f</a>)</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>단종 제품이라 실구매 경로가 없고 가상 스토리텔링으로만 소개 가능. 향 선택은 시향 없이 망설이는 고려 단계에서 막힘(감정 -2).</div></div>
+ <div class="box s1"><b>개선 목표</b><div>고려 단계의 불안(-2)을 줄이고, 단종 향수를 '소장하고 싶은 오브제'로 보이게 하는 메시지 정립</div></div>
+ <div class="box s1"><b>가설</b><div>시향 전 망설임은 향 설명보다 '소장 가치를 설명하는 스토리'로 줄일 수 있다. 희소성을 단정하지 않고 신화 콘셉트로 차별화한다.</div></div>
 </div>
-</dd></div>
-<div class="row"><dt>결과</dt><dd>[ ] (릴스 게시 전, <span class="tag none">미측정</span>)</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>15초 릴스 완료 → 게시 → Meta 광고 연결(06장)</dd></div>
-<div class="row"><dt>노션 출처</dt><dd>DAY19(<a href="https://app.notion.com/p/00907e401b6382b9839a011146b32c8a">https://app.notion.com/p/00907e401b6382b9839a011146b32c8a</a>) / DAY20(<a href="https://app.notion.com/p/c7407e401b6383e88157019ae7c654c6">https://app.notion.com/p/c7407e401b6383e88157019ae7c654c6</a>) / DAY21(<a href="https://app.notion.com/p/f7007e401b6383a4b3710175c3655052">https://app.notion.com/p/f7007e401b6383a4b3710175c3655052</a>) / DAY22(<a href="https://app.notion.com/p/30107e401b6382f2a7bb01ca9219edcf">https://app.notion.com/p/30107e401b6382f2a7bb01ca9219edcf</a>)</dd></div>
-</dl>
-<footer class="ft"><span>04</span></footer>
-</section>
-<section id="section-05" aria-labelledby="title-05">
-<header><span class="no">05</span><h2 id="title-05">콘텐츠 — 웹사이트 상세페이지 디자인·제작 과정</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>출시 알림 신청까지 이어지는 랜딩·상세페이지를 직접 제작해 공개</dd></div>
-<div class="row"><dt>기간</dt><dd>[ ]</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">GitHub Pages</span> <span class="b">Claude</span> <span class="b">GA4</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">랜딩 제작</span> <span class="b skill">콘텐츠 기획</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>방문 세션 / 시작 [ ] / 목표 [ ] / 결과 114 (<span class="tag real">실측</span>, 2026.10.15~11.11) / 출처 GA4</dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>평균 참여 시간 / 시작 [ ] / 목표 [ ] / 결과 54초 (<span class="tag real">실측</span>, 활성 사용자당, 같은 기간) / 출처 GA4 보고서 개요</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>단종·SOLD OUT 표시의 상품이라 구매는 안 되고 출시 알림만 받는 구조. 후기 5건과 수치는 예시임을 페이지에 표시. 상세페이지는 섹션별로 작업 진행 중.</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>향 노트·상품정보를 보고 출시 알림 버튼 클릭까지 한 흐름으로 가게 하기</dd></div>
-<div class="row"><dt>가설</dt><dd>[ ]</dd></div>
-<div class="row"><dt>실행</dt><dd>1) 상단 메뉴·히어로·상품 설명·향 노트(탑/미들/베이스)·시향 후기·상품정보제공고시·신청 폼 구성 2) 신청 폼은 이름·이메일만 받고 입력값은 저장·전송 없이 삭제, 개인정보 안내 팝업 추가 3) 컨셉을 밤에서 신화·금빛 황금사과로 변경 4) GA4 연결</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot">[ ]</dd></div>
-<div class="row"><dt>결과</dt><dd>사이트 공개 완료. 세션 114 (<span class="tag real">실측</span>), 총 사용자 76 (<span class="tag real">실측</span>), 평균 참여 시간 54초 (<span class="tag real">실측</span>), 참여율 32.46% (<span class="tag real">실측</span>, Looker Studio).</dd></div>
-<div class="row"><dt>재분석</dt><dd>대시보드 메모에 &quot;섹션별로 쪼개 봐도 의미 있는 결과가 안 나온다, 대부분 첫 섹션 보고 이탈하거나 전환으로 이어진다 → 가치 전달을 빨리 찾게 해야 한다&quot;고 적음.</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>섹션 작업 마무리, 릴스·광고 링크에 UTM 연결</dd></div>
-<div class="row"><dt>링크</dt><dd>상세페이지(공개 사이트) <a href="https://sainshin.github.io/lolitalempika/">https://sainshin.github.io/lolitalempika/</a> / GitHub 저장소 <a href="https://github.com/sainshin/lolitalempika">https://github.com/sainshin/lolitalempika</a></dd></div>
-</dl>
-<footer class="ft"><span>05</span></footer>
-</section>
-<section id="section-06" aria-labelledby="title-06">
-<header><span class="no">06</span><h2 id="title-06">퍼포먼스 — 측정 구조·지표 설계와 Meta 광고 집행</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>GA4 측정 구조와 지표를 설계하고 릴스 2개로 Meta 광고 집행</dd></div>
-<div class="row"><dt>기간</dt><dd>측정 구조 2026.10.29 (배포·검증일) / 광고 집행 [ ] (예정)</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">GA4</span> <span class="b">Looker Studio</span> <span class="b">Meta 광고 관리자</span> <span class="b">GitHub Pages</span> <span class="b">Google Sheets</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">측정 설계</span> <span class="b skill">지표 해석</span> <span class="b skill">예산 설계</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>추가 링크 2개의 클릭 기록 / 시작 두 링크 모두 미수집 / 목표 클릭 1회 = 이벤트 1회 / 결과 두 링크 모두 확인 (<span class="tag real">실측</span>, 사이트 패널 기준) / 출처 GA4 이벤트 설계표 <a href="https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit">https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit</a></dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>출시 알림 버튼 클릭 수 / 시작 [ ] / 목표 약 4건 (가안, <span class="tag assume">가정</span>: DAY37 시뮬레이션 광역 기준, 아래 참고) / 결과 [ ] (미집행) / 출처 Meta 광고 관리자 + GA4</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>기존 ga4-easy.js가 버튼형 링크를 자동 수집하는데, 가격 옆 작은 '↓ 알림 신청' 링크와 '상품 정보 더보기' 링크는 자동 판별에서 빠져 클릭이 쌓이지 않았음. 광고는 아직 집행하지 않음(집행 예정).</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>출시 알림 버튼 클릭으로 가는 행동과 상품정보 관심 신호를 빠짐없이 측정하고(입력값은 이벤트에 넣지 않음), 릴스 2개로 출시 알림 버튼 클릭을 얻는 광고 구조 만들기</dd></div>
-<div class="row"><dt>가설</dt><dd>빠진 두 링크에 data-ga 속성을 붙이면 클릭 1회당 이벤트 1회가 기록될 것이다.</dd></div>
-<div class="row"><dt>실행</dt><dd>1) 사용자 행동 17개를 이벤트명·파라미터·주요 이벤트 여부로 정리 (기존 유지 6 / 신규 반영 2 / 미선정 2 / 제외·해당 없음 7) 2) tab_click·faq_open처럼 중복되거나 실제 동작과 안 맞는 이벤트는 제외 3) 두 링크에 data-ga 속성을 추가해 배포 (커밋 03e935c) 4) ?ga_debug=1로 열어 두 링크를 클릭해 이벤트 이름·파라미터·횟수 확인 5) 광고 설계: 릴스 8초·15초 2개, 예산 5만 원 이내, 1주(하루 약 7,143원), 지표 CTR·CPC·출시 알림 버튼 클릭 수·CPA (<span class="tag assume">가정</span>). 실제 판매가 없어 ROAS는 쓰지 않음.</dd></div>
-<div class="row"><dt>시뮬레이션 (DAY37 예산분배 시트의 가정값 CTR 2%, 클릭 후 전환율 4%를 5만 원 규모로 축소, 전부 가안·<span class="tag assume">가정</span>)</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>광역 (CPM 10,000원)</dt><dd>노출 5,000 / 클릭 100 / CPC 500원 / 출시 알림 버튼 클릭 약 4건 / CPA 12,500원</dd></div>
-<div class="row indent-1"><dt>좁은 (CPM 15,000원)</dt><dd>노출 약 3,333 / 클릭 약 67 / CPC 750원 / 출시 알림 버튼 클릭 약 2.7건 / CPA 18,750원</dd></div>
-<div class="row indent-1"><dt>더 좁은 (CPM 20,000원)</dt><dd>노출 2,500 / 클릭 50 / CPC 1,000원 / 출시 알림 버튼 클릭 2건 / CPA 25,000원</dd></div>
-<div class="row indent-1"><dt>해석</dt><dd>이 규모에서는 알림 클릭이 한 자릿수라 우연 변동이 크다. 목표는 '달성 여부'보다 가정값을 실측으로 교체하는 데 둔다. 실제 집행 후 목표를 다시 확정.</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot">[ ]</dd></div>
-<div class="row"><dt>결과</dt><dd>측정 구조는 2026.10.29 배포·확인 (<span class="tag real">실측</span>). 광고는 집행 예정이라 CTR·CPC·CPA [ ] (<span class="tag none">미측정</span>).</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>DebugView로 수신 확인, 출시 알림 버튼의 이벤트(버튼 단위) 구분 확인, 릴스 완료 후 광고 집행</dd></div>
-<div class="row"><dt>출처</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>GA4 이벤트 설계표</dt><dd><a href="https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit">https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit</a></dd></div>
-<div class="row indent-1"><dt>GA4 세팅 및 개별 페이지(수업 시트)</dt><dd><a href="https://docs.google.com/spreadsheets/d/1rSXT5tpxmKqForl4vyxOHyDzdgGWDKW2jdAP_xzY3Hw/edit">https://docs.google.com/spreadsheets/d/1rSXT5tpxmKqForl4vyxOHyDzdgGWDKW2jdAP_xzY3Hw/edit</a></dd></div>
-<div class="row indent-1"><dt>배포 커밋</dt><dd><a href="https://github.com/sainshin/lolitalempika/commit/03e935c">https://github.com/sainshin/lolitalempika/commit/03e935c</a></dd></div>
-<div class="row indent-1"><dt>GA4 속성</dt><dd><a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></dd></div>
-<div class="row indent-1"><dt>노션 DAY32 퍼포먼스 마케팅 개론 &amp; 핵심 지표</dt><dd><a href="https://app.notion.com/p/40507e401b6380be9360e9264dff5eb6">https://app.notion.com/p/40507e401b6380be9360e9264dff5eb6</a></dd></div>
-<div class="row indent-1"><dt>노션 DAY33 디지털 광고 매체 비교</dt><dd><a href="https://app.notion.com/p/40607e401b63806694ffea495a8d7dee">https://app.notion.com/p/40607e401b63806694ffea495a8d7dee</a></dd></div>
-<div class="row indent-1"><dt>노션 DAY38 광고 예산·매체·키워드</dt><dd><a href="https://app.notion.com/p/78307e401b6383bead9d810ef11def9f">https://app.notion.com/p/78307e401b6383bead9d810ef11def9f</a></dd></div>
-<div class="row indent-1"><dt>DAY32 고객생애가치·5지표 시트</dt><dd><a href="https://docs.google.com/spreadsheets/d/12eTC4xdoAL831MGm4XJ3PzMwZuwg-JIhmdLDhi9RHdA/edit">https://docs.google.com/spreadsheets/d/12eTC4xdoAL831MGm4XJ3PzMwZuwg-JIhmdLDhi9RHdA/edit</a></dd></div>
-<div class="row indent-1"><dt>DAY37 예산분배 시트</dt><dd><a href="https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit">https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit</a></dd></div>
-</dl>
-<footer class="ft"><span>06</span></footer>
-</section>
-<section id="section-07" aria-labelledby="title-07">
-<header><span class="no">07</span><h2 id="title-07">퍼포먼스 — 소재 비교와 성과 해석 (8초 vs 15초)</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>릴스 8초 vs 15초 소재별 광고 성과 비교와 해석</dd></div>
-<div class="row"><dt>기간</dt><dd>[ ]</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">Meta 광고 관리자</span> <span class="b">GA4</span> <span class="b">Looker Studio</span> <span class="b">Google Sheets</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">소재 분석</span> <span class="b skill">실험 설계</span> <span class="b skill">지표 해석</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>CTR (소재별) / 시작 [ ] / 목표 2% (가안, <span class="tag assume">가정</span>: DAY37 시뮬레이션) / 결과 [ ] (미집행) / 출처 Meta 광고 관리자</dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>출시 알림 버튼 클릭 수·CPA (소재별) / 시작 [ ] / 목표 소재별 예산 2.5만 원 기준 약 2건, CPA 약 12,500원 (가안, <span class="tag assume">가정</span>: 광역 CPM 1만 원) / 결과 [ ] (미집행) / 출처 Meta 광고 관리자 + GA4</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>같은 예산 안에서 길이가 다른 릴스 2개(8초·15초)를 집행 예정. 소재별 2.5만 원·1주 규모라 노출 약 2,500·클릭 약 50, 알림 클릭 약 2건으로 표본이 매우 작음.</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>어느 소재가 출시 알림 버튼 클릭에 더 효율적인지 확인하고 이유를 해석. 표본이 작으면 '판정 보류'로 두고 다음 집행 조건을 정리.</dd></div>
-<div class="row"><dt>가설</dt><dd>[ ]</dd></div>
-<div class="row"><dt>실행</dt><dd>결과 보기 전 사전 점검 — 1) 두 소재가 길이 한 가지만 다른가 2) 같은 기간·같은 예산·같은 지면인가 3) 주 지표(출시 알림 버튼 클릭 수)를 결과 보기 전에 정했는가. Meta는 소재마다 다른 집단에 노출하므로 순수한 A/B가 아니라 '소재 비교'로 표기. 판정은 승자 A / 승자 B / 차이 없음 / 실험 무효 / 판정 보류 중 하나.</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot">[ ]</dd></div>
-<div class="row"><dt>결과</dt><dd>[ ] (미집행, <span class="tag none">미측정</span>)</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>[ ]</dd></div>
-<div class="row"><dt>출처</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>DAY38 A/B 실험실 시트</dt><dd><a href="https://docs.google.com/spreadsheets/d/1Ka4K3qg_89IZQER7RBjRKWpEldEYer3mJ83Otb4xJEI/edit">https://docs.google.com/spreadsheets/d/1Ka4K3qg_89IZQER7RBjRKWpEldEYer3mJ83Otb4xJEI/edit</a></dd></div>
-<div class="row indent-1"><dt>DAY38 시험 결과(PDF)</dt><dd><a href="https://drive.google.com/file/d/1w1mbWqGz086tsS5hRpOYoFdq_FTS0g8M/view">https://drive.google.com/file/d/1w1mbWqGz086tsS5hRpOYoFdq_FTS0g8M/view</a></dd></div>
-<div class="row indent-1"><dt>노션 DAY38 광고 예산·매체·키워드</dt><dd><a href="https://app.notion.com/p/78307e401b6383bead9d810ef11def9f">https://app.notion.com/p/78307e401b6383bead9d810ef11def9f</a></dd></div>
-<div class="row indent-1"><dt>DAY37 예산분배 시트</dt><dd><a href="https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit">https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit</a></dd></div>
-</dl>
-<footer class="ft"><span>07</span></footer>
-</section>
-<section id="section-08" aria-labelledby="title-08">
-<header><span class="no">08</span><h2 id="title-08">그로스 — 데이터 스튜디오 보고서</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>GA4와 Meta 광고를 Looker Studio에 연결한 성과 대시보드</dd></div>
-<div class="row"><dt>기간</dt><dd>2026.11.06 생성(파일명 261106) ~ 2026.11.12 데이터 갱신 확인</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">Looker Studio</span> <span class="b">GA4</span> <span class="b">Meta 광고 관리자</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">대시보드</span> <span class="b skill">지표 해석</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>세션수 / 시작 [ ] / 목표 [ ] / 결과 114 (<span class="tag real">실측</span>) / 출처 Looker Studio 보고서 <a href="https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7">https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7</a></dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>출시 알림 버튼 클릭 수 / 시작 [ ] / 목표 [ ] / 결과 [ ] / 출처 GA4 이벤트 보고서 <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></dd></div>
-<div class="row"><dt>상황 분석</dt><dd>GA4 숫자가 GA4 화면에만 있어 한눈에 보기 어려움. 현재 대시보드는 방문자 지표 카드 6개뿐이고 Meta 데이터와 퍼널 차트는 없음. 광고는 집행 예정.</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>노출 → 클릭 → 세션 → 출시 알림 버튼 클릭 퍼널을 한 화면에서 보기</dd></div>
-<div class="row"><dt>가설</dt><dd>[ ]</dd></div>
-<div class="row"><dt>실행</dt><dd>1) GA4 연결, 캠페인 필터·기간 선택 추가 2) 방문자 지표 카드 6개 (조회수 193 · 세션수 114 · 총 사용자 76 · 새 사용자 76 · 참여율 32.46% · 주요 이벤트 0, 모두 <span class="tag real">실측</span>) 3) 주요 이벤트(page_view · cta_click · generate_lead · scroll · click) 정의 문구 기재</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot">[ ]</dd></div>
-<div class="row"><dt>결과</dt><dd>카드 6개 완성 (<span class="tag real">실측</span>). 퍼널 차트·Meta 연결은 광고 후 [ ] (<span class="tag none">미측정</span>).</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>광고 후 Meta 데이터 연결, 방문 → CTA 클릭 → 출시 알림 버튼 클릭 퍼널 차트 추가, 기간 필터 지정</dd></div>
-<div class="row"><dt>메모</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt></dt><dd>주요 이벤트 0은 '전환이 없다'는 뜻이 아니라, generate_lead 등을 GA4에서 주요 이벤트로 지정·확인하지 않은 상태일 가능성이 있음 (미확인).</dd></div>
-<div class="row indent-1"><dt></dt><dd>대시보드 상단 문구의 목표(ROAS 150% / CTR 2% / CVR 4%)는 이 프로젝트의 지표 설계(ROAS 미사용)와 달라 광고 집행 전에 문구 수정이 필요함.</dd></div>
-<div class="row indent-1"><dt></dt><dd>Meta 데이터 미연결, 카드 기간 필터 미지정. 카드 숫자는 지난 28일(2026.10.15~11.11) 기준이며 약 70명이 /lolitalempika/ 경로, 나머지는 다른 경로 방문.</dd></div>
-<div class="row indent-1"><dt></dt><dd>광고 집행 후 이 장의 결과 칸을 채움.</dd></div>
-<div class="row"><dt>출처</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>Looker Studio 보고서 &quot;롤리타렘피카_261106_신사인&quot;</dt><dd><a href="https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7">https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7</a></dd></div>
-<div class="row indent-1"><dt>GA4 속성</dt><dd><a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></dd></div>
-</dl>
-<footer class="ft"><span>08</span></footer>
-</section>
-<section id="section-09" aria-labelledby="title-09">
-<header><span class="no">09</span><h2 id="title-09">그로스 — 병목 진단과 개선</h2></header>
-<dl>
-<div class="row"><dt>프로젝트명</dt><dd>방문부터 출시 알림 버튼 클릭까지 가장 많이 이탈한 단계 진단과 개선</dd></div>
-<div class="row"><dt>기간</dt><dd>[ ]</dd></div>
-<div class="row"><dt>도구 배지</dt><dd><span class="b">GA4</span> <span class="b">Looker Studio</span></dd></div>
-<div class="row"><dt>역량 배지</dt><dd><span class="b skill">퍼널 분석</span> <span class="b skill">병목 진단</span></dd></div>
-<div class="row"><dt>핵심 지표 1 / 시작 / 목표 / 결과 / 출처</dt><dd>방문자 → CTA 클릭 전환 / 시작 [ ] / 목표 [ ] / 결과 [ ] / 출처 GA4 이벤트 보고서 <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></dd></div>
-<div class="row"><dt>핵심 지표 2 / 시작 / 목표 / 결과 / 출처</dt><dd>방문자 → 출시 알림 버튼 클릭 전환 / 시작 [ ] / 목표 [ ] / 결과 [ ] / 출처 GA4 이벤트 보고서 (같은 링크)</dd></div>
-<div class="row"><dt>상황 분석</dt><dd>광고 집행 전이라 광고 유입 기준 퍼널 수치를 알 수 없음. 퍼널 단계는 방문 [ ] → 스크롤 [ ] → CTA 클릭 [ ] → 출시 알림 버튼 클릭 [ ] → 폼 시작 [ ]. 가장 많이 이탈하는 구간 [ ] (광고 후 확인).</dd></div>
-<div class="row"><dt>개선 목표</dt><dd>광고 후 퍼널에서 가장 큰 이탈 구간을 찾아 그 구간 전환을 높이기</dd></div>
-<div class="row"><dt>가설</dt><dd>방문자는 첫 섹션에서 가치를 못 찾으면 이탈한다. 출시 알림 CTA를 첫 화면에서 더 빨리 보이게 하면 출시 알림 버튼 클릭이 늘 것이다. (광고 후 검증)</dd></div>
-<div class="row"><dt>실행</dt><dd>[ ]</dd></div>
-<div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot">[ ]</dd></div>
-<div class="row"><dt>결과</dt><dd>[ ] (광고 후 측정)</dd></div>
-<div class="row"><dt>재분석</dt><dd>[ ]</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>[ ]</dd></div>
-<div class="row"><dt>출처</dt><dd hidden></dd></div>
-<div class="row indent-1"><dt>GA4 속성(이벤트 보고서)</dt><dd><a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></dd></div>
-<div class="row indent-1"><dt>Looker Studio 보고서</dt><dd><a href="https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7">https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7</a></dd></div>
-<div class="row indent-1"><dt>GA4 이벤트 설계표</dt><dd><a href="https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit">https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit</a></dd></div>
-</dl>
-<footer class="ft"><span>09</span></footer>
-</section>
-<section id="section-10" aria-labelledby="title-10">
-<header><span class="no">10</span><h2 id="title-10">종합 — 전체 결과와 다음 목표</h2></header>
-<dl>
-<div class="row"><dt>북극성 지표 결과 / 출처</dt><dd>출시 알림 버튼 클릭 수 [ ] (광고 후 측정). 참고 시작값: 방문자 76명, 평균 참여 시간 54초 (<span class="tag real">실측</span>) / GA4 (2026.10.15~11.11, 2026.11.12 조회) <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></dd></div>
-<div class="row"><dt>콘텐츠 결과 / 재분석</dt><dd>사이트 공개 완료, 캐릭터 표정시트 9장·소품 1개·패키지 1개·로고 10종 제작 (본인 집계), 릴스 성과 [ ] / [ ]</dd></div>
-<div class="row"><dt>퍼포먼스 결과 / 재분석</dt><dd>광고 집행 예정. 측정 구조는 이벤트 설계표 기준 반영·클릭 확인 (<span class="tag real">실측</span>). CTR·CPC·CPA [ ] / [ ]</dd></div>
-<div class="row"><dt>그로스 결과 / 재분석</dt><dd>대시보드 카드 6개 완성 (<span class="tag real">실측</span>), 퍼널 차트·Meta 연결은 광고 후 / 병목 [ ]</dd></div>
-<div class="row"><dt>지금 병목</dt><dd>릴스 제작이 끝나지 않아 광고가 시작되지 못했고, 그래서 CTR·CPC·CPA·출시 알림 버튼 클릭 수가 모두 [ ] (<span class="tag none">미측정</span>).</dd></div>
-<div class="row"><dt>다음 목표 예상</dt><dd>릴스 완료 → Meta 광고 1주 집행 (5만 원 이내) → 소재 비교와 퍼널 재측정 → 가안(<span class="tag assume">가정</span>) 목표를 실측으로 교체</dd></div>
-<div class="row"><dt>출처</dt><dd>장표 02~09의 출처 링크</dd></div>
-<div class="row"><dt>도구 · 역량</dt><dd><span class="b">Notion</span> <span class="b">카피 머신 사이트(<a href="https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/</a>)</span> <span class="b">ChatGPT</span> <span class="b skill">브랜드 전략</span> <span class="b skill">페르소나·고객 여정 설계</span> <span class="b skill">포지셔닝·USP</span> <span class="b skill">카피라이팅</span> <span class="b">Midjourney</span> <span class="b">Higgsfield</span> <span class="b">Dreamina</span> <span class="b">Figma</span> <span class="b skill">브랜드 비주얼</span> <span class="b skill">콘텐츠 기획</span> <span class="b">Instagram</span> <span class="b skill">숏폼 제작</span> <span class="b">GitHub Pages</span> <span class="b">Claude</span> <span class="b">GA4</span> <span class="b skill">랜딩 제작</span> <span class="b">Looker Studio</span> <span class="b">Meta 광고 관리자</span> <span class="b">Google Sheets</span> <span class="b skill">측정 설계</span> <span class="b skill">지표 해석</span> <span class="b skill">예산 설계</span> <span class="b skill">소재 분석</span> <span class="b skill">실험 설계</span> <span class="b skill">대시보드</span> <span class="b skill">퍼널 분석</span> <span class="b skill">병목 진단</span> <span class="b">카드뉴스 기획 머신 사이트(<a href="https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/</a>)</span> <span class="b skill">광고 소재 기획</span> <span class="b skill">카드뉴스 제작</span></dd></div>
-</dl>
-<footer class="ft"><span>10</span></footer>
-</section>
-</main>
-</body>
-</html>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>4개 모듈로 압축<div class="detail"><strong>① Who</strong> · 서하윤 페르소나</div>
+<div class="detail"><strong>② Stuck</strong> · 고객 여정 감정 곡선, 고려 단계 -2</div>
+<div class="detail"><strong>③ Win</strong> · 포지셔닝 빈자리(X축 희소성·소장 오브제 / Y축 향 지속성, 경쟁 브랜드: 본투스탠드아웃·논픽션·페사드·탬버린즈·SW19) + USP (노션 DAY9: <a href="https://app.notion.com/p/42007e401b63834295f28149775f9fc0">https://app.notion.com/p/42007e401b63834295f28149775f9fc0</a>)</div>
+<div class="detail"><strong>④ Say</strong> · 카피 개선(의도 → 초안 → 고친 이유 → 완성)</div>
+<div class="detail"><strong>의도</strong> · 단종 제품을 소장하고 싶은 황금사과로 소개</div>
+<div class="detail"><strong>초안</strong> · 100개 한정수량, 그리스로마신화 여신도 탐낸 향수</div>
+<div class="detail"><strong>고친 이유</strong> · 5문 점검 결과 태그라인 N 판정 / 금지 표현('여신') 제외 / 희소성·지속 시간 단정 금지</div>
+<div class="detail"><strong>완성</strong> · &quot;아프로디테도 탐낸 그 향수&quot;, &quot;그리스로마신화 황금사과를 향수로 담다&quot;</div>
+<div class="detail"><strong>카피 원칙</strong> · 신화는 창작 콘셉트로 표기, 희소성(재고·한정) 단정 금지, 지속 시간 보장 금지</div></div></div>
+ <div class="box s2"><b>증거</b><div class="shot media"></div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>기획 4개 모듈 정리 완료. 성과 수치는 광고·사이트 데이터가 쌓인 뒤 08~09장에서 확인 (현재 [ ], <span class="tag none">미측정</span>).</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>02~05 콘텐츠 장으로 연결: 서하윤 고려 단계 불안을 릴스·상세페이지에서 해소</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>한 줄 맥락</strong> · 롤리타렘피카 향수를 구매하고 싶어하는 가상의 페르소나 서하윤에게 '소장하고 싶은 황금사과'로 소개하는 가상 프로젝트</div>
+<div class="detail"><strong>브랜드·제품</strong> · 롤리타렘피카 골든 애플 100ml, 예정가 208,000원</div>
+<div class="detail"><strong>타깃·페르소나</strong> · 서하윤, 33세, 패션 플랫폼 브랜드 디자이너 8년 차, 성수동 (노션 DAY7: <a href="https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a">https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a</a>)</div>
+<div class="detail"><strong>고객 여정(5단계 감정)</strong> · 인지 호기심 +2 / 고려 불안 -2 / 구매 안도 +1 / 사용 만족 +3 / 충성 애착 +2 (노션 DAY8, 승부 지점 = 고려 단계)</div>
+<div class="detail"><strong>노션 출처</strong> · DAY7 페르소나(<a href="https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a">https://app.notion.com/p/11807e401b6382e5825e01c00e240f0a</a>) / DAY8 CDJ(<a href="https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51">https://app.notion.com/p/3e407e401b6383ffac5881393dcb8f51</a>) / DAY9 포지셔닝·USP(<a href="https://app.notion.com/p/42007e401b63834295f28149775f9fc0">https://app.notion.com/p/42007e401b63834295f28149775f9fc0</a>) / DAY10 메시지 하우스(<a href="https://app.notion.com/p/55107e401b638353b2e501939f4d94be">https://app.notion.com/p/55107e401b638353b2e501939f4d94be</a>) / DAY11 브랜드 가이드라인(<a href="https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f">https://app.notion.com/p/67b07e401b63838380ce81e9fb738b6f</a>) / DAY13 고객 여정별 콘텐츠 전략(<a href="https://app.notion.com/p/b9107e401b638323816701bda25d2b65">https://app.notion.com/p/b9107e401b638323816701bda25d2b65</a>) / DAY14 카피(<a href="https://app.notion.com/p/e8107e401b6382feb46c815e61df558f">https://app.notion.com/p/e8107e401b6382feb46c815e61df558f</a>)</div>
+<div class="detail"><strong>배운 점</strong> · 카피는 범용 타깃보다 이 제품을 살 만한 구체적인 페르소나를 떠올릴 때 선명해지고, 그러려면 제품 컨셉과 페르소나를 먼저 구체화해야한다</div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>01</span></div></section>
+<section class="page" id="section-02" aria-labelledby="title-02">
+<div class="hd"><span class="no">02</span><span class="ax c">콘텐츠</span><span class="ttl" id="title-02" role="heading" aria-level="2">세계관 캐릭터 시트·소품·로고 제작</span><span class="period">[ ]</span></div>
+<div class="badges"><span class="b">ChatGPT</span> <span class="b">Midjourney</span> <span class="b">Higgsfield</span> <span class="b">Dreamina</span> <span class="b">Figma</span> <span class="b skill">브랜드 비주얼</span> <span class="b skill">콘텐츠 기획</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>제작물 수 (캐릭터 표정시트 9장 · 소품 1개 · 패키지 1개 · 로고 10종, 합계 21개)</td><td>0</td><td>[ ]</td><td>표정시트 9장·소품 1개·패키지 1개·로고 10종 (<span class="tag real">실측</span>, 본인 집계)</td><td>노션 DAY16~18</td></tr><tr><td>[ ]</td><td></td><td></td><td></td><td></td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>국내 전용 공식 SNS가 없어 국내 접점이 없고, 단종 제품이라 제품 이미지만으로는 이야기를 전달하기 어려움. 콘셉트를 밤에서 신화·금빛 황금사과로 변경하면서 비주얼도 다시 정리함.</div></div>
+ <div class="box s1"><b>개선 목표</b><div>기획 01의 서하윤·황금사과 메시지를 릴스·상세페이지에서 같은 얼굴로 보이게 만드는 캐릭터·소품·패키지·로고 체계 만들기</div></div>
+ <div class="box s1"><b>가설</b><div>[ ]</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>ChatGPT · Midjourney · Higgsfield · Dreamina · Figma로 캐릭터 표정시트 9장, 소품 1개, 패키지 1개, 로고 10종 제작. 컬러 팔레트 #C99843 · #F1E3D1 · #D9B9AE · #551A2A · #9D88B8 (11/4 브리프 기준)</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media"><img src="reels-packaging.png" alt="롤리타렘피카 향수 패키지" width="1024" height="1536">
+<img src="reels-model.png" alt="모델과 롤리타렘피카 골든 애플 향수" width="1254" height="1254"></div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>캐릭터 표정시트 9장·소품 1개·패키지 1개·로고 10종 제작 (<span class="tag real">실측</span>, 본인 집계)</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>04 릴스, 05 상세페이지에 같은 캐릭터·소품·로고 적용</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>노션 출처</strong> · DAY16 무드보드 &amp; 누끼컷 제작 가이드(<a href="https://app.notion.com/p/f4107e401b6382da8c250121846e3c04">https://app.notion.com/p/f4107e401b6382da8c250121846e3c04</a>) / DAY17 AI 모델 &amp; 피드·메타 광고 이미지 제작 가이드(<a href="https://app.notion.com/p/aa407e401b63838db53e01b8393a7448">https://app.notion.com/p/aa407e401b63838db53e01b8393a7448</a>) / DAY18 광고 평가표 &amp; 카드뉴스 제작 가이드(<a href="https://app.notion.com/p/b1c07e401b6382508991818baba9c872">https://app.notion.com/p/b1c07e401b6382508991818baba9c872</a>)</div>
+<div class="detail"><strong>배운점</strong> · AI 툴별 강점을 알고 역할을 나누면 품질과 비용을 함께 잡을 수 있다. (ChatGPT 합성, Midjourney 무드, Higgsfield 일관성, Dreamina 부분 수정)</div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>02</span></div></section>
+<section class="page" id="section-03" aria-labelledby="title-03">
+<div class="hd"><span class="no">03</span><span class="ax c">콘텐츠</span><span class="ttl" id="title-03" role="heading" aria-level="2">세계관을 담은 인스타 피드·메타 광고 이미지·카드뉴스 제작</span><span class="period"></span></div>
+<div class="badges"><span class="b">ChatGPT(Work 모드)</span> <span class="b">Higgsfield(Nano Banana Pro)</span> <span class="b">Figma</span> <span class="b">Instagram</span> <span class="b">카드뉴스 기획 머신 사이트(<a href="https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/</a>)</span> <span class="b skill">콘텐츠 기획</span> <span class="b skill">광고 소재 기획</span> <span class="b skill">카드뉴스 제작</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>제작물 수 (인스타 피드 9장 · 메타 이미지 광고 소재 3종 · 카드뉴스 기획 3세트 · 카드뉴스 1개 [ ]장)</td><td>0</td><td>[ ]</td><td>[ ] (본인 집계 필요)</td><td>노션 DAY17~18</td></tr><tr><td>피드·카드뉴스 게시물 반응 (도달·저장·공유)</td><td>0</td><td>[ ]</td><td>[ ] (<span class="tag none">미측정</span>, 집계 기간 표기 필요)</td><td>인스타그램 인사이트</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>국내에서 잘 알려지지 않은 브랜드라 제품 소개가 먼저 필요함. 레퍼런스 광고(카드뉴스 4개·릴스 5개)를 5축(브랜드·고객·카피·비주얼·행동)으로 평가해 보니, 향수 광고는 비주얼이 강하고 브랜드·행동이 약한 경우가 많았음.</div></div>
+ <div class="box s1"><b>개선 목표</b><div>메타 광고 소재 3종의 소구점을 서로 다르게 나눠 메시지가 겹치지 않게 하고, 카드뉴스로 낯선 브랜드의 제품을 먼저 소개하기</div></div>
+ <div class="box s1"><b>가설</b><div>[ ]</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div><div class="detail"><strong>① 레퍼런스 분석</strong> · 카드뉴스·릴스 광고를 5축으로 평가해 강한 축·약한 축과 내 브랜드 적용점 정리 (예: 향 구성을 고급 오브제로 시각화, 3분할로 여신별 향수 소개)</div>
+<div class="detail"><strong>② AI 모델·요소 준비</strong> · AI 모델(아프로디테·아테나·헤라) 원본과 레퍼런스 세트(프로필·표정·얼굴·신체 시트)를 만들고, Higgsfield에 제품·캐릭터 요소 등록</div>
+<div class="detail"><strong>③ 인스타 피드 9장</strong> · 3×3 그리드에서 가로 한 줄을 톤 하나로 구성(톤 3안 × 3장), 브랜드 계정(@lolitalempika.mag)에 게시</div>
+<div class="detail"><strong>④ 메타 이미지 광고 3종</strong> · 소재별 소구점 분리 (1 금빛 사과 보틀의 소장 가치 / 2 리미티드 에디션의 희소성 / 3 향의 개성). 이미지는 글자 없이 빈 영역을 남겨 생성하고, 피그마에서 헤드라인·보조 문구·CTA 3줄을 얹음</div>
+<div class="detail"><strong>⑤ 카드뉴스</strong> · 목적 후보(제품 소개형·이벤트·혜택형·후기·사례형·비교형) 중 제품 소개형 선택 (이유: 잘 모르는 브랜드라 제품 소개가 우선) → 카드뉴스 기획 머신 사이트 제작 → 피그마 템플릿 생성·내용 입력 → 직접 손질 후 내보내기</div></div></div>
+ <div class="box s2"><b>증거</b><div class="shot media"><img src="image-ad.png" alt="롤리타렘피카 이미지 광고" width="1080" height="1080">
+<img src="card-news.png" alt="롤리타렘피카 카드뉴스 표지" width="1080" height="1080"></div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>[ ]</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>[ ]</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>메모</strong></div>
+<div class="detail">메타 광고 소재 보조 문구에 &quot;국내 단 100개&quot;, &quot;5~8시간&quot;이 남아 있음. 01장 카피 원칙(희소성·지속 시간 단정 금지)과 충돌하므로 수정 필요.</div>
+<div class="detail">노션 DAY17·18 내용은 2026.10.10 기준이라, 컨셉 변경(밤 → 신화·금빛 황금사과) 이후의 최신 결과물과 다를 수 있음. 최종 결과물 기준으로 확인 필요.</div>
+<div class="detail">02장(캐릭터 표정시트)과 ②(AI 모델 레퍼런스 세트)가 겹칠 수 있음. 어느 장에 둘지 정리 필요.</div>
+<div class="detail"><strong>노션 출처</strong> · DAY17 AI 모델 &amp; 피드·메타 광고 이미지 제작 가이드(<a href="https://app.notion.com/p/aa407e401b63838db53e01b8393a7448">https://app.notion.com/p/aa407e401b63838db53e01b8393a7448</a>) / DAY18 광고 평가표 &amp; 카드뉴스 제작 가이드(<a href="https://app.notion.com/p/b1c07e401b6382508991818baba9c872">https://app.notion.com/p/b1c07e401b6382508991818baba9c872</a>)</div>
+<div class="detail"><strong>배운 점</strong> · [ ]</div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>03</span></div></section>
+<section class="page" id="section-04" aria-labelledby="title-04">
+<div class="hd"><span class="no">04</span><span class="ax c">콘텐츠</span><span class="ttl" id="title-04" role="heading" aria-level="2">단종 향수 세계관 릴스(8초·15초)로 인지 만들기</span><span class="period">[ ]</span></div>
+<div class="badges"><span class="b">Instagram</span> <span class="b">Notion</span> <span class="b skill">콘텐츠 기획</span> <span class="b skill">숏폼 제작</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>릴스 조회수</td><td>0 (게시 전)</td><td>[ ]</td><td>[ ] (<span class="tag none">미측정</span>)</td><td>인스타그램 인사이트</td></tr><tr><td>좋아요·댓글·공유</td><td>0</td><td>[ ]</td><td>[ ] (<span class="tag none">미측정</span>)</td><td>인스타그램 인사이트</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>국내 인지도 접점이 올리브영·롯데ON·글로우픽 노출뿐. 인스타 계정(@lolitalempika.mag)은 운영 중. 릴스는 콘셉트 변경(밤 → 신화·금빛 황금사과)으로 다시 제작 중.</div></div>
+ <div class="box s1"><b>개선 목표</b><div>8초(짧고 강한 후킹)와 15초(스토리 전달)로 인지 → 프로필 방문 → 사이트 유입 흐름 만들기</div></div>
+ <div class="box s1"><b>가설</b><div>단종 향수 한 제품을 중심으로 세계관 릴스를 올리면 인지에서 사이트 유입까지 이어질 것이다.</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>릴스 8초·15초 제작 (노션 DAY19 숏폼 기획안 → DAY20 8초 장면표·15초 스토리보드 → DAY21 8초 릴스 프롬프트 → DAY22 15초 장면별 영상 소스)</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media"><img src="reel-dress.png" alt="바람에 흩날리는 그리스 여신 드레스" width="941" height="1672">
+<video id="reel-video" src="reel-8s.mp4" poster="reel-first-frame.png" preload="none" muted playsinline controls aria-label="롤리타렘피카 8초 릴스"></video>
+<img class="print-poster" src="reel-first-frame.png" alt="8초 릴스 첫 장면">
+</div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>[ ] (릴스 게시 전, <span class="tag none">미측정</span>)</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>15초 릴스 완료 → 게시 → Meta 광고 연결(06장)</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>노션 출처</strong> · DAY19(<a href="https://app.notion.com/p/00907e401b6382b9839a011146b32c8a">https://app.notion.com/p/00907e401b6382b9839a011146b32c8a</a>) / DAY20(<a href="https://app.notion.com/p/c7407e401b6383e88157019ae7c654c6">https://app.notion.com/p/c7407e401b6383e88157019ae7c654c6</a>) / DAY21(<a href="https://app.notion.com/p/f7007e401b6383a4b3710175c3655052">https://app.notion.com/p/f7007e401b6383a4b3710175c3655052</a>) / DAY22(<a href="https://app.notion.com/p/30107e401b6382f2a7bb01ca9219edcf">https://app.notion.com/p/30107e401b6382f2a7bb01ca9219edcf</a>)</div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>04</span></div></section>
+<section class="page" id="section-05" aria-labelledby="title-05">
+<div class="hd"><span class="no">05</span><span class="ax c">콘텐츠</span><span class="ttl" id="title-05" role="heading" aria-level="2">출시 알림 신청까지 이어지는 랜딩·상세페이지를 직접 제작해 공개</span><span class="period">[ ]</span></div>
+<div class="badges"><span class="b">GitHub Pages</span> <span class="b">Claude</span> <span class="b">GA4</span> <span class="b skill">랜딩 제작</span> <span class="b skill">콘텐츠 기획</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>방문 세션</td><td>[ ]</td><td>[ ]</td><td>114 (<span class="tag real">실측</span>, 2026.10.15~11.11)</td><td>GA4</td></tr><tr><td>평균 참여 시간</td><td>[ ]</td><td>[ ]</td><td>54초 (<span class="tag real">실측</span>, 활성 사용자당, 같은 기간)</td><td>GA4 보고서 개요</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>단종·SOLD OUT 표시의 상품이라 구매는 안 되고 출시 알림만 받는 구조. 후기 5건과 수치는 예시임을 페이지에 표시. 상세페이지는 섹션별로 작업 진행 중.</div></div>
+ <div class="box s1"><b>개선 목표</b><div>향 노트·상품정보를 보고 출시 알림 버튼 클릭까지 한 흐름으로 가게 하기</div></div>
+ <div class="box s1"><b>가설</b><div>[ ]</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>1) 상단 메뉴·히어로·상품 설명·향 노트(탑/미들/베이스)·시향 후기·상품정보제공고시·신청 폼 구성 2) 신청 폼은 이름·이메일만 받고 입력값은 저장·전송 없이 삭제, 개인정보 안내 팝업 추가 3) 컨셉을 밤에서 신화·금빛 황금사과로 변경 4) GA4 연결</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media">[ ]</div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>사이트 공개 완료. 세션 114 (<span class="tag real">실측</span>), 총 사용자 76 (<span class="tag real">실측</span>), 평균 참여 시간 54초 (<span class="tag real">실측</span>), 참여율 32.46% (<span class="tag real">실측</span>, Looker Studio).</div></div>
+ <div class="box s3"><b>재분석</b><div>대시보드 메모에 &quot;섹션별로 쪼개 봐도 의미 있는 결과가 안 나온다, 대부분 첫 섹션 보고 이탈하거나 전환으로 이어진다 → 가치 전달을 빨리 찾게 해야 한다&quot;고 적음.</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>섹션 작업 마무리, 릴스·광고 링크에 UTM 연결</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>링크</strong> · 상세페이지(공개 사이트) <a href="https://sainshin.github.io/lolitalempika/">https://sainshin.github.io/lolitalempika/</a> / GitHub 저장소 <a href="https://github.com/sainshin/lolitalempika">https://github.com/sainshin/lolitalempika</a></div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>05</span></div></section>
+<section class="page" id="section-06" aria-labelledby="title-06">
+<div class="hd"><span class="no">06</span><span class="ax p">퍼포먼스</span><span class="ttl" id="title-06" role="heading" aria-level="2">GA4 측정 구조와 지표를 설계하고 릴스 2개로 Meta 광고 집행</span><span class="period">측정 구조 2026.10.29 (배포·검증일) / 광고 집행 [ ] (예정)</span></div>
+<div class="badges"><span class="b">GA4</span> <span class="b">Looker Studio</span> <span class="b">Meta 광고 관리자</span> <span class="b">GitHub Pages</span> <span class="b">Google Sheets</span> <span class="b skill">측정 설계</span> <span class="b skill">지표 해석</span> <span class="b skill">예산 설계</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>추가 링크 2개의 클릭 기록</td><td>두 링크 모두 미수집</td><td>클릭 1회 = 이벤트 1회</td><td>두 링크 모두 확인 (<span class="tag real">실측</span>, 사이트 패널 기준)</td><td>GA4 이벤트 설계표 <a href="https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit">https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit</a></td></tr><tr><td>출시 알림 버튼 클릭 수</td><td>[ ]</td><td>약 4건 (가안, <span class="tag assume">가정</span>: DAY37 시뮬레이션 광역 기준, 아래 참고)</td><td>[ ] (미집행)</td><td>Meta 광고 관리자 + GA4</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>기존 ga4-easy.js가 버튼형 링크를 자동 수집하는데, 가격 옆 작은 '↓ 알림 신청' 링크와 '상품 정보 더보기' 링크는 자동 판별에서 빠져 클릭이 쌓이지 않았음. 광고는 아직 집행하지 않음(집행 예정).</div></div>
+ <div class="box s1"><b>개선 목표</b><div>출시 알림 버튼 클릭으로 가는 행동과 상품정보 관심 신호를 빠짐없이 측정하고(입력값은 이벤트에 넣지 않음), 릴스 2개로 출시 알림 버튼 클릭을 얻는 광고 구조 만들기</div></div>
+ <div class="box s1"><b>가설</b><div>빠진 두 링크에 data-ga 속성을 붙이면 클릭 1회당 이벤트 1회가 기록될 것이다.</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>1) 사용자 행동 17개를 이벤트명·파라미터·주요 이벤트 여부로 정리 (기존 유지 6 / 신규 반영 2 / 미선정 2 / 제외·해당 없음 7) 2) tab_click·faq_open처럼 중복되거나 실제 동작과 안 맞는 이벤트는 제외 3) 두 링크에 data-ga 속성을 추가해 배포 (커밋 03e935c) 4) ?ga_debug=1로 열어 두 링크를 클릭해 이벤트 이름·파라미터·횟수 확인 5) 광고 설계: 릴스 8초·15초 2개, 예산 5만 원 이내, 1주(하루 약 7,143원), 지표 CTR·CPC·출시 알림 버튼 클릭 수·CPA (<span class="tag assume">가정</span>). 실제 판매가 없어 ROAS는 쓰지 않음.</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media">[ ]</div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>측정 구조는 2026.10.29 배포·확인 (<span class="tag real">실측</span>). 광고는 집행 예정이라 CTR·CPC·CPA [ ] (<span class="tag none">미측정</span>).</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>DebugView로 수신 확인, 출시 알림 버튼의 이벤트(버튼 단위) 구분 확인, 릴스 완료 후 광고 집행</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>시뮬레이션 (DAY37 예산분배 시트의 가정값 CTR 2%, 클릭 후 전환율 4%를 5만 원 규모로 축소, 전부 가안·<span class="tag assume">가정</span>)</strong></div>
+<div class="detail"><strong>광역 (CPM 10,000원)</strong> · 노출 5,000 / 클릭 100 / CPC 500원 / 출시 알림 버튼 클릭 약 4건 / CPA 12,500원</div>
+<div class="detail"><strong>좁은 (CPM 15,000원)</strong> · 노출 약 3,333 / 클릭 약 67 / CPC 750원 / 출시 알림 버튼 클릭 약 2.7건 / CPA 18,750원</div>
+<div class="detail"><strong>더 좁은 (CPM 20,000원)</strong> · 노출 2,500 / 클릭 50 / CPC 1,000원 / 출시 알림 버튼 클릭 2건 / CPA 25,000원</div>
+<div class="detail"><strong>해석</strong> · 이 규모에서는 알림 클릭이 한 자릿수라 우연 변동이 크다. 목표는 '달성 여부'보다 가정값을 실측으로 교체하는 데 둔다. 실제 집행 후 목표를 다시 확정.</div>
+<div class="detail"><strong>출처</strong></div>
+<div class="detail"><strong>GA4 이벤트 설계표</strong> · <a href="https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit">https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit</a></div>
+<div class="detail"><strong>GA4 세팅 및 개별 페이지(수업 시트)</strong> · <a href="https://docs.google.com/spreadsheets/d/1rSXT5tpxmKqForl4vyxOHyDzdgGWDKW2jdAP_xzY3Hw/edit">https://docs.google.com/spreadsheets/d/1rSXT5tpxmKqForl4vyxOHyDzdgGWDKW2jdAP_xzY3Hw/edit</a></div>
+<div class="detail"><strong>배포 커밋</strong> · <a href="https://github.com/sainshin/lolitalempika/commit/03e935c">https://github.com/sainshin/lolitalempika/commit/03e935c</a></div>
+<div class="detail"><strong>GA4 속성</strong> · <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></div>
+<div class="detail"><strong>노션 DAY32 퍼포먼스 마케팅 개론 &amp; 핵심 지표</strong> · <a href="https://app.notion.com/p/40507e401b6380be9360e9264dff5eb6">https://app.notion.com/p/40507e401b6380be9360e9264dff5eb6</a></div>
+<div class="detail"><strong>노션 DAY33 디지털 광고 매체 비교</strong> · <a href="https://app.notion.com/p/40607e401b63806694ffea495a8d7dee">https://app.notion.com/p/40607e401b63806694ffea495a8d7dee</a></div>
+<div class="detail"><strong>노션 DAY38 광고 예산·매체·키워드</strong> · <a href="https://app.notion.com/p/78307e401b6383bead9d810ef11def9f">https://app.notion.com/p/78307e401b6383bead9d810ef11def9f</a></div>
+<div class="detail"><strong>DAY32 고객생애가치·5지표 시트</strong> · <a href="https://docs.google.com/spreadsheets/d/12eTC4xdoAL831MGm4XJ3PzMwZuwg-JIhmdLDhi9RHdA/edit">https://docs.google.com/spreadsheets/d/12eTC4xdoAL831MGm4XJ3PzMwZuwg-JIhmdLDhi9RHdA/edit</a></div>
+<div class="detail"><strong>DAY37 예산분배 시트</strong> · <a href="https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit">https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit</a></div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>06</span></div></section>
+<section class="page" id="section-07" aria-labelledby="title-07">
+<div class="hd"><span class="no">07</span><span class="ax p">퍼포먼스</span><span class="ttl" id="title-07" role="heading" aria-level="2">릴스 8초 vs 15초 소재별 광고 성과 비교와 해석</span><span class="period">[ ]</span></div>
+<div class="badges"><span class="b">Meta 광고 관리자</span> <span class="b">GA4</span> <span class="b">Looker Studio</span> <span class="b">Google Sheets</span> <span class="b skill">소재 분석</span> <span class="b skill">실험 설계</span> <span class="b skill">지표 해석</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>CTR (소재별)</td><td>[ ]</td><td>2% (가안, <span class="tag assume">가정</span>: DAY37 시뮬레이션)</td><td>[ ] (미집행)</td><td>Meta 광고 관리자</td></tr><tr><td>출시 알림 버튼 클릭 수·CPA (소재별)</td><td>[ ]</td><td>소재별 예산 2.5만 원 기준 약 2건, CPA 약 12,500원 (가안, <span class="tag assume">가정</span>: 광역 CPM 1만 원)</td><td>[ ] (미집행)</td><td>Meta 광고 관리자 + GA4</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>같은 예산 안에서 길이가 다른 릴스 2개(8초·15초)를 집행 예정. 소재별 2.5만 원·1주 규모라 노출 약 2,500·클릭 약 50, 알림 클릭 약 2건으로 표본이 매우 작음.</div></div>
+ <div class="box s1"><b>개선 목표</b><div>어느 소재가 출시 알림 버튼 클릭에 더 효율적인지 확인하고 이유를 해석. 표본이 작으면 '판정 보류'로 두고 다음 집행 조건을 정리.</div></div>
+ <div class="box s1"><b>가설</b><div>[ ]</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>결과 보기 전 사전 점검 — 1) 두 소재가 길이 한 가지만 다른가 2) 같은 기간·같은 예산·같은 지면인가 3) 주 지표(출시 알림 버튼 클릭 수)를 결과 보기 전에 정했는가. Meta는 소재마다 다른 집단에 노출하므로 순수한 A/B가 아니라 '소재 비교'로 표기. 판정은 승자 A / 승자 B / 차이 없음 / 실험 무효 / 판정 보류 중 하나.</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media">[ ]</div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>[ ] (미집행, <span class="tag none">미측정</span>)</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>[ ]</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>출처</strong></div>
+<div class="detail"><strong>DAY38 A/B 실험실 시트</strong> · <a href="https://docs.google.com/spreadsheets/d/1Ka4K3qg_89IZQER7RBjRKWpEldEYer3mJ83Otb4xJEI/edit">https://docs.google.com/spreadsheets/d/1Ka4K3qg_89IZQER7RBjRKWpEldEYer3mJ83Otb4xJEI/edit</a></div>
+<div class="detail"><strong>DAY38 시험 결과(PDF)</strong> · <a href="https://drive.google.com/file/d/1w1mbWqGz086tsS5hRpOYoFdq_FTS0g8M/view">https://drive.google.com/file/d/1w1mbWqGz086tsS5hRpOYoFdq_FTS0g8M/view</a></div>
+<div class="detail"><strong>노션 DAY38 광고 예산·매체·키워드</strong> · <a href="https://app.notion.com/p/78307e401b6383bead9d810ef11def9f">https://app.notion.com/p/78307e401b6383bead9d810ef11def9f</a></div>
+<div class="detail"><strong>DAY37 예산분배 시트</strong> · <a href="https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit">https://docs.google.com/spreadsheets/d/1hxsw2yW9T5Y5nBf8712k8s512VkYl3eZfQSKF6a74g0/edit</a></div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>07</span></div></section>
+<section class="page" id="section-08" aria-labelledby="title-08">
+<div class="hd"><span class="no">08</span><span class="ax g">그로스</span><span class="ttl" id="title-08" role="heading" aria-level="2">GA4와 Meta 광고를 Looker Studio에 연결한 성과 대시보드</span><span class="period">2026.11.06 생성(파일명 261106) ~ 2026.11.12 데이터 갱신 확인</span></div>
+<div class="badges"><span class="b">Looker Studio</span> <span class="b">GA4</span> <span class="b">Meta 광고 관리자</span> <span class="b skill">대시보드</span> <span class="b skill">지표 해석</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>세션수</td><td>[ ]</td><td>[ ]</td><td>114 (<span class="tag real">실측</span>)</td><td>Looker Studio 보고서 <a href="https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7">https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7</a></td></tr><tr><td>출시 알림 버튼 클릭 수</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>GA4 이벤트 보고서 <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>GA4 숫자가 GA4 화면에만 있어 한눈에 보기 어려움. 현재 대시보드는 방문자 지표 카드 6개뿐이고 Meta 데이터와 퍼널 차트는 없음. 광고는 집행 예정.</div></div>
+ <div class="box s1"><b>개선 목표</b><div>노출 → 클릭 → 세션 → 출시 알림 버튼 클릭 퍼널을 한 화면에서 보기</div></div>
+ <div class="box s1"><b>가설</b><div>[ ]</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>1) GA4 연결, 캠페인 필터·기간 선택 추가 2) 방문자 지표 카드 6개 (조회수 193 · 세션수 114 · 총 사용자 76 · 새 사용자 76 · 참여율 32.46% · 주요 이벤트 0, 모두 <span class="tag real">실측</span>) 3) 주요 이벤트(page_view · cta_click · generate_lead · scroll · click) 정의 문구 기재</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media">[ ]</div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>카드 6개 완성 (<span class="tag real">실측</span>). 퍼널 차트·Meta 연결은 광고 후 [ ] (<span class="tag none">미측정</span>).</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>광고 후 Meta 데이터 연결, 방문 → CTA 클릭 → 출시 알림 버튼 클릭 퍼널 차트 추가, 기간 필터 지정</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>메모</strong></div>
+<div class="detail">주요 이벤트 0은 '전환이 없다'는 뜻이 아니라, generate_lead 등을 GA4에서 주요 이벤트로 지정·확인하지 않은 상태일 가능성이 있음 (미확인).</div>
+<div class="detail">대시보드 상단 문구의 목표(ROAS 150% / CTR 2% / CVR 4%)는 이 프로젝트의 지표 설계(ROAS 미사용)와 달라 광고 집행 전에 문구 수정이 필요함.</div>
+<div class="detail">Meta 데이터 미연결, 카드 기간 필터 미지정. 카드 숫자는 지난 28일(2026.10.15~11.11) 기준이며 약 70명이 /lolitalempika/ 경로, 나머지는 다른 경로 방문.</div>
+<div class="detail">광고 집행 후 이 장의 결과 칸을 채움.</div>
+<div class="detail"><strong>출처</strong></div>
+<div class="detail"><strong>Looker Studio 보고서 &quot;롤리타렘피카_261106_신사인&quot;</strong> · <a href="https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7">https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7</a></div>
+<div class="detail"><strong>GA4 속성</strong> · <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>08</span></div></section>
+<section class="page" id="section-09" aria-labelledby="title-09">
+<div class="hd"><span class="no">09</span><span class="ax g">그로스</span><span class="ttl" id="title-09" role="heading" aria-level="2">방문부터 출시 알림 버튼 클릭까지 가장 많이 이탈한 단계 진단과 개선</span><span class="period">[ ]</span></div>
+<div class="badges"><span class="b">GA4</span> <span class="b">Looker Studio</span> <span class="b skill">퍼널 분석</span> <span class="b skill">병목 진단</span></div>
+<table><tr><th style="width:26%">핵심 지표</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>방문자 → CTA 클릭 전환</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>GA4 이벤트 보고서 <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></td></tr><tr><td>방문자 → 출시 알림 버튼 클릭 전환</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>GA4 이벤트 보고서 (같은 링크)</td></tr></table>
+<div class="row3">
+ <div class="box s1"><b>상황 분석</b><div>광고 집행 전이라 광고 유입 기준 퍼널 수치를 알 수 없음. 퍼널 단계는 방문 [ ] → 스크롤 [ ] → CTA 클릭 [ ] → 출시 알림 버튼 클릭 [ ] → 폼 시작 [ ]. 가장 많이 이탈하는 구간 [ ] (광고 후 확인).</div></div>
+ <div class="box s1"><b>개선 목표</b><div>광고 후 퍼널에서 가장 큰 이탈 구간을 찾아 그 구간 전환을 높이기</div></div>
+ <div class="box s1"><b>가설</b><div>방문자는 첫 섹션에서 가치를 못 찾으면 이탈한다. 출시 알림 CTA를 첫 화면에서 더 빨리 보이게 하면 출시 알림 버튼 클릭이 늘 것이다. (광고 후 검증)</div></div>
+</div>
+<div class="row2">
+ <div class="box s2"><b>실행</b><div>[ ]</div></div>
+ <div class="box s2"><b>증거</b><div class="shot media">[ ]</div></div>
+</div>
+<div class="row3">
+ <div class="box s3"><b>결과</b><div>[ ] (광고 후 측정)</div></div>
+ <div class="box s3"><b>재분석</b><div>[ ]</div></div>
+ <div class="box s3"><b>다음 목표 예상</b><div>[ ]</div></div>
+</div>
+<div class="notes"><div class="detail"><strong>출처</strong></div>
+<div class="detail"><strong>GA4 속성(이벤트 보고서)</strong> · <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></div>
+<div class="detail"><strong>Looker Studio 보고서</strong> · <a href="https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7">https://datastudio.google.com/reporting/aaf20601-03ed-4f23-a148-bb4eabb182c7</a></div>
+<div class="detail"><strong>GA4 이벤트 설계표</strong> · <a href="https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit">https://docs.google.com/spreadsheets/d/1673CUgg6xWivHluLep-PqPvK1813wzVcr2dXRhhA170/edit</a></div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>09</span></div></section>
+<section class="page" id="section-10" aria-labelledby="title-10">
+<div class="hd"><span class="no">10</span><span class="ttl" id="title-10" role="heading" aria-level="2">전체 결과와 다음 목표</span><span class="period">2026.09 ~ 2026.12</span></div>
+<table><tr><th style="width:26%">전체 목표 (북극성 지표)</th><th>시작</th><th>목표</th><th>결과</th><th style="width:14%">출처</th></tr><tr><td>출시 알림 버튼 클릭 수</td><td></td><td></td><td>출시 알림 버튼 클릭 수 [ ] (광고 후 측정). 참고 시작값: 방문자 76명, 평균 참여 시간 54초 (<span class="tag real">실측</span>)</td><td>GA4 (2026.10.15~11.11, 2026.11.12 조회) <a href="https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome">https://analytics.google.com/analytics/web/#/a413733409p561088120/reports/intelligenthome</a></td></tr></table>
+<table><tr><th style="width:14%">축</th><th>결과</th><th>재분석</th></tr>
+<tr style="height:22mm"><td><span class="ax c">콘텐츠</span></td><td>사이트 공개 완료, 캐릭터 표정시트 9장·소품 1개·패키지 1개·로고 10종 제작 (본인 집계), 릴스 성과 [ ]</td><td>[ ]</td></tr>
+<tr style="height:22mm"><td><span class="ax p">퍼포먼스</span></td><td>광고 집행 예정. 측정 구조는 이벤트 설계표 기준 반영·클릭 확인 (<span class="tag real">실측</span>). CTR·CPC·CPA [ ]</td><td>[ ]</td></tr>
+<tr style="height:22mm"><td><span class="ax g">그로스</span></td><td>대시보드 카드 6개 완성 (<span class="tag real">실측</span>), 퍼널 차트·Meta 연결은 광고 후</td><td>병목 [ ]</td></tr></table>
+<div class="top2">
+ <div class="box s5"><b>지금 병목</b><div>릴스 제작이 끝나지 않아 광고가 시작되지 못했고, 그래서 CTR·CPC·CPA·출시 알림 버튼 클릭 수가 모두 [ ] (<span class="tag none">미측정</span>).</div></div>
+ <div class="box s5"><b>다음 목표 예상</b><div>릴스 완료 → Meta 광고 1주 집행 (5만 원 이내) → 소재 비교와 퍼널 재측정 → 가안(<span class="tag assume">가정</span>) 목표를 실측으로 교체</div></div>
+</div>
+<div class="box"><b>도구 · 역량</b><div class="badges"><span class="b">Notion</span> <span class="b">카피 머신 사이트(<a href="https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-copy-machine.diaroad7.chatgpt.site/</a>)</span> <span class="b">ChatGPT</span> <span class="b skill">브랜드 전략</span> <span class="b skill">페르소나·고객 여정 설계</span> <span class="b skill">포지셔닝·USP</span> <span class="b skill">카피라이팅</span> <span class="b">Midjourney</span> <span class="b">Higgsfield</span> <span class="b">Dreamina</span> <span class="b">Figma</span> <span class="b skill">브랜드 비주얼</span> <span class="b skill">콘텐츠 기획</span> <span class="b">Instagram</span> <span class="b skill">숏폼 제작</span> <span class="b">GitHub Pages</span> <span class="b">Claude</span> <span class="b">GA4</span> <span class="b skill">랜딩 제작</span> <span class="b">Looker Studio</span> <span class="b">Meta 광고 관리자</span> <span class="b">Google Sheets</span> <span class="b skill">측정 설계</span> <span class="b skill">지표 해석</span> <span class="b skill">예산 설계</span> <span class="b skill">소재 분석</span> <span class="b skill">실험 설계</span> <span class="b skill">대시보드</span> <span class="b skill">퍼널 분석</span> <span class="b skill">병목 진단</span> <span class="b">카드뉴스 기획 머신 사이트(<a href="https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/">https://lolita-lempicka-cardnews-machine.diaroad7.chatgpt.site/</a>)</span> <span class="b skill">광고 소재 기획</span> <span class="b skill">카드뉴스 제작</span></div></div>
+<div class="notes"><div class="detail"><strong>출처</strong> · 장표 02~09의 출처 링크</div></div>
+<div class="ft"><span>신사인 · 롤리타렘피카 (골든 애플 캠페인)</span><span>10</span></div></section>
+</body></html>
