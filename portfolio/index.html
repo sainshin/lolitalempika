@@ -168,12 +168,7 @@ table td:last-child, table th:last-child { width: 34%; }
 <div class="row"><dt>증거 캡처 파일 이름</dt><dd class="shot" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1rem">
 <img src="reel-dress.png" alt="바람에 흩날리는 그리스 여신 드레스" width="941" height="1672">
 <div>
-<video id="reel-video" src="reel-8s.mp4" poster="reel-dress.png" preload="none" muted playsinline aria-label="롤리타렘피카 8초 릴스" style="display: block; width: 100%; aspect-ratio: 9 / 16; background: #292416"></video>
-<div style="display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem">
-<button id="reel-play" type="button" aria-controls="reel-video">재생</button>
-<button id="reel-sound" type="button" aria-controls="reel-video">소리 켜기</button>
-</div>
-<p id="reel-error" role="status" hidden>영상을 재생할 수 없습니다.</p>
+<video id="reel-video" src="reel-8s.mp4" poster="reel-first-frame.png" preload="none" muted playsinline controls aria-label="롤리타렘피카 8초 릴스" style="display: block; width: 100%; aspect-ratio: 9 / 16; background: #292416"></video>
 </div>
 </dd></div>
 <div class="row"><dt>결과</dt><dd>[ ] (릴스 게시 전, <span class="tag none">미측정</span>)</dd></div>
@@ -331,41 +326,5 @@ table td:last-child, table th:last-child { width: 34%; }
 <footer class="ft"><span>10</span></footer>
 </section>
 </main>
-<script>
-  const reel = document.getElementById("reel-video");
-  const playButton = document.getElementById("reel-play");
-  const soundButton = document.getElementById("reel-sound");
-  const errorMessage = document.getElementById("reel-error");
-
-  playButton.addEventListener("click", async () => {
-    if (!reel.paused) {
-      reel.pause();
-      return;
-    }
-
-    errorMessage.hidden = true;
-    try {
-      await reel.play();
-    } catch (error) {
-      if (error.name !== "AbortError") errorMessage.hidden = false;
-    }
-  });
-
-  function updatePlayButton() {
-    playButton.textContent = reel.paused || reel.ended ? "재생" : "일시정지";
-  }
-
-  reel.addEventListener("play", updatePlayButton);
-  reel.addEventListener("pause", updatePlayButton);
-  reel.addEventListener("ended", updatePlayButton);
-
-  soundButton.addEventListener("click", () => {
-    reel.muted = !reel.muted;
-  });
-
-  reel.addEventListener("volumechange", () => {
-    soundButton.textContent = reel.muted ? "소리 켜기" : "소리 끄기";
-  });
-</script>
 </body>
 </html>
